@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - AGT E MOTORS</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+
+</head>
+
+<body>
+
+  <section id="header">
+    <a href="#">
+        <img class="logo" src="images/logo.png" alt="" width="280" height="140">
+    </a>
+    
+    <nav>
+      <ul id="navbar">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="shop.html">Produits</a></li>
+        <li><a href="blog.html">Services</a></li>
+        <li><a class="active" href="about.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="formation.html">Formations</a></li>
+        <li><a href="stories.html">Stories</a></li>
+        
+      </ul>
+    </nav>
+
+    <style>
+        /* Force navbar to display properly on desktop */
+        @media (min-width: 800px) {
+            #navbar {
+                display: flex !important;
+                position: relative !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: center !important;
+                right: auto !important;
+                top: auto !important;
+                height: auto !important;
+                width: auto !important;
+                background-color: transparent !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+            }
+            #menu-container {
+                display: none !important;
+            }
+        }
+        /* Style du conteneur du menu */
+        #menu-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Bouton hamburger */
+        #menu-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        #menu-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Menu mobile */
+        #menu-content {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 200px;
+            display: none;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        #menu-content a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display: block;
+            transition: background 0.3s ease;
+        }
+
+        #menu-content a:hover {
+            background: #f4f4f4;
+        }
+
+        /* Classe pour afficher le menu */
+        .menu-open {
+            display: flex !important;
+        }
+    </style>
+
+    <div id="menu-container">
+      <button id="menu-button" aria-label="Ouvrir le menu">
+          <i class="fas fa-bars"></i>
+      </button>
+      <nav id="menu-content">
+        <a href="index.html">Accueil</a>
+        <a href="shop.html">Produits</a>
+        <a href="blog.html">Services</a>
+        <a class="active" href="about.html">À propos</a>
+        <a href="contact.html">Contact</a>
+        <a href="formation.html">Formations</a>
+      </nav>
+    </div>
+
+    <script>
+        document.getElementById("menu-button").addEventListener("click", function() {
+            document.getElementById("menu-content").classList.toggle("menu-open");
+        });
+    </script>
+  </section>
+  
+  <script>
+      document.getElementById("menu-button").addEventListener("click", function() {
+          document.getElementById("menu-content").classList.toggle("menu-open");
+      });
+  </script>
+  </section>
+  <style>
+    #navbar {
+      display: flex; /* Affiche le menu sur desktop */
+    }
+  
+    /* Styles pour le menu mobile */
+    #navbar ul {
+      display: none; /* Cache le menu par défaut sur mobile */
+      list-style: none;
+      padding: 0;
+    }
+  
+    #navbar.active ul {
+      display: block; /* Affiche le menu lorsque la classe 'active' est ajoutée */
+    }
+  
+    #mobile {
+      display: none; /* Masque le bouton mobile sur desktop */
+    }
+  
+    /* Affiche le bouton hamburger uniquement sur mobile */
+    @media (max-width: 768px) {
+      #navbar {
+        display: none; /* Cache le menu par défaut sur mobile */
+      }
+      #mobile {
+        display: block; /* Affiche le bouton hamburger sur mobile */
+      }
+    }
+  </style>
+  <style>
+    /* Style du conteneur du menu */
+    #menu-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Bouton hamburger */
+    #menu-button {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    #menu-button:hover {
+        transform: scale(1.1);
+    }
+
+    /* Menu mobile */
+    #menu-content {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 200px;
+        display: none;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #menu-content a {
+        text-decoration: none;
+        color: #333;
+        padding: 10px;
+        display: block;
+        transition: background 0.3s ease;
+    }
+
+    #menu-content a:hover {
+        background: #f4f4f4;
+    }
+
+    /* Classe pour afficher le menu */
+    .menu-open {
+        display: flex !important;
+    }
+</style>
+
+
+  
+ 
+    <section id="page-header" class="about-header">
+        <h2>Qui sommes-nous?</h2>
+    </section>
+
+    <section id="about-head" class="section-p1">
+        <!--<img src="images/about/a6.jpg" alt="">-->
+        <div>
+            <h2>Qui sommes-nous ?</h2>
+            <p>AGT E MOTORS est une entreprise spécialisée dans les infrastructures et solutions pour véhicules électriques (IRVE), la vente des véhicules électriques, Hybride rechargeable Efficacité Energétique, Gestion de l’Energie, la photovoltaïque et l’Agrivoltaïque au Sénégal et en Afrique de l’Ouest. Nous nous engageons à accélérer la transition énergétique vers une mobilité propre en proposant des solutions clés en main adaptées aux particuliers, entreprises et professionnels du transport (taxis, VTC, flottes d’entreprises, etc.).
+            </p>
+            <a href="#"><img src="images/formation/a.jpg" class="logo" alt=""></a>
+            <h3>Notre mission </h3>
+            <p>Accélérer l’électromobilité en Afrique en fournissant des solutions intégrées, alliant véhicules électriques, bornes de recharge, la photovoltaïque et services sur mesure, pour une mobilité plus verte, plus économique et plus accessible. 
+            </p>
+            <h3>Nos objectifs  </h3>
+            <p>Créer un écosystème complet : Déployer des solutions combinant véhicules électriques et infrastructures de recharge. 
+
+                 Développer un réseau de recharge fiable et accessible dans des zones stratégiques pour répondre aux besoins croissants de mobilité électrique. 
+                
+                Réduire l’empreinte carbone et proposer des solutions économiques et respectueuses de l’environnement. 
+            </p>
+            <h3>Pourquoi choisir AGT E MOTORS ?  </h3>
+            <p>Un réseau de recharge optimisé et adapté aux réalités locales. 
+
+                 Des solutions personnalisées pour taxis, entreprises et particuliers. 
+            
+                Un engagement fort pour une mobilité plus verte et plus rentable. 
+            </p>
+            <h3>Nos valeurs</h3>
+            <p> Innovation – Développement de solutions connectées et performantes. 
+
+                 Durabilité – Engagement fort pour une mobilité propre et accessible. 
+                
+                 Accessibilité – Une offre pensée pour tous les usagers de la mobilité électrique.
+            </p>
+            <h3>Nos Partenaires & Engagements </h3>
+            <p> Nous collaborons avec des institutions publiques et privées pour structurer un cadre favorable à la mobilité électrique. Grâce à nos partenariats académiques en France et en Chine, nous contribuons également à la formation des jeunes aux métiers techniques du secteur, garantissant ainsi un développement durable de cette filière en Afrique. 
+            </p>
+            <h3>Vers une Mobilité Durable  </h3>
+            <p> Vers une Mobilité Durable 
+
+                Notre ambition : faire de l’électromobilité une réalité accessible à tous en Afrique. En conjuguant innovation, expertise locale et engagement environnemental, nous façonnons dès aujourd’hui le futur du transport. 
+            </p>
+            <abbr title="">
+            </abbr>
+            <br><br>
+            <marquee bgcolor="#ccc" loop="-1" scrollamount="5" width="100%">
+            </marquee>
+        </div>
+
+        
+    </section>
+
+
+    
+
+    <!--<section id="about-app" class="section-p1">
+        <h1>Download our <a href=#>App</a></h1>
+        <div class="video">
+            <video autoplay muted loop src="images/about/1.mp4"></video>
+        </div>
+    </section>-->
+
+   <!---- <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="images/features/f1.png" alt="">
+            <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/features/f2.png" alt="">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/features/f3.png" alt="">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/features/f4.png" alt="">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/features/f5.png" alt="">
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/features/f6.png" alt="">
+            <h6>F24/7 Support</h6>
+        </div>
+    </section> -->
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+          <h4>Inscrivez-vous à notre newsletter</h4>
+          <p>Recevez des mises à jour par e-mail sur nos <span>offres spéciales AGT E MOTORS.</span></p>
+      </div>
+      <div class="form">
+          <form action="https://formspree.io/f/mkgozbqy" method="POST" target="_blank" rel="noopener noreferrer" style="display: flex; gap: 10px;">
+              <input type="email" name="email" placeholder="Votre adresse e-mail" required style="flex: 1;">
+              <button type="submit" class="normal">Sign Up</button>
+          </form>
+      </div>
+  </section>
+  
+
+  <footer class="section-p1">
+      <div class="col">
+          <img class="logo" src="images/logo.png" alt="" width="140" height="70">
+          <h4>Contact</h4>
+          <p><strong>Adresse:</strong> 85 Cité Batrain Ouakam Dakar Sénégal</p>
+          <p><strong>Numeros:</strong> (+221) 78 683 22 94 / 33 910 02 70 / 77 215 99 64 (whatsapp)</p>
+          <p><strong>Heures de travail:</strong> 8h:00 - 17h:00, Lun - Sam</p>
+          <p><strong>À Touba:</strong> Fermé le Vendredi, Samedi 8h - 12h</p>
+          <div class="follow">
+              <h4>Nous suivre</h4>
+              <div class="icon">
+                  <a href="https://www.facebook.com/share/186LwGu3Wf/" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+                  <a href="https://www.linkedin.com/company/agt-e-motors/" target="_blank"><i class="fab fa-linkedin-in"></i></a>  
+                  <a href="https://youtu.be/EaOlj_1uyvQ?feature=shared" target="_blank"><i class="fab fa-youtube-square"></i></a>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+          <h4>À propos de nous</h4>
+          <a href="about.html" >Qui Sommes-Nous?</a>
+          <a href="poli.html">Politique de Confidentialité</a>
+          <a href="contact.html">Nous Contacter</a>
+      </div>
+      
+      
+      
+     
+      <div class="copyright">
+          <p>Créé par AGT E MOTORS | Tous droits réservés | &#169; 2026</p>
+      </div>
+  </footer>
+
+  <!-- javascript script file link -->
+  <script src="script.js"></script>
+</body>
+</html>

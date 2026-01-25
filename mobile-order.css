@@ -1,0 +1,81 @@
+/* Mobile-friendly stacking helpers (safer alternative)
+   Note: we avoid turning the <body> into a flex container because
+   absolute/positioned children (banner-content, sliders) become out-of-flow
+   and can hide other content. Instead we ensure sections behave like a
+   normal document flow on small screens and tweak a few positioned pieces. */
+
+@media (max-width: 768px) {
+  /* Keep natural document flow */
+  body {
+    display: block;
+  }
+
+  /* Ensure top-level sections take full width */
+  body > section, body > div, body > main {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Banner: avoid absolute overlay that can hide content on small screens */
+  .banner, #banner, #hero, .slider-container {
+    position: relative !important;
+    min-height: auto !important;
+    padding: 0;
+  }
+
+  /* Make banner content flow under/inside the banner area on mobile */
+  .banner-content {
+    position: relative !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+    margin: -1.5rem auto 0.6rem auto; /* slight overlap to keep visual emphasis */
+    background: rgba(0,0,0,0.5);
+    padding: 8px 12px;
+    border-radius: 8px;
+    max-width: calc(100% - 32px);
+    color: #fff;
+    text-align: center;
+  }
+
+  .banner-content h1, .banner-content p { color: #fff; }
+
+  /* Make slides/images responsive and visible in flow */
+  .slide, .slide img, .slider, .slider-container { width: 100% !important; height: auto !important; }
+  .slide img { object-fit: cover; display: block; }
+
+  /* Stack product grids into single columns for readability */
+  .product-grid, .grid-container, .pro-container {
+    display: block !important;
+    padding: 0 8px;
+  }
+
+  .product-card, .product-container, .card, .pro {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 8px 0 !important;
+  }
+
+  /* Newsletter and footer: normal flow (already last in document) */
+  #newsletter { margin-top: 8px; }
+
+  /* Thumbnails / small galleries: allow horizontal scroll */
+  .car-thumbnails, .small-image-group {
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 5px;
+    padding: 5px 8px 8px;
+  }
+
+  /* Buttons: center and keep touch-friendly sizes */
+  .btn, .devis-btn, .large-button, .buttons button {
+    display: inline-block !important;
+    margin: 0.4rem auto !important;
+    min-width: 140px !important;
+    padding: 8px 15px !important;
+  }
+
+  /* General spacing polish */
+  .section-p1 { padding-left: 8px !important; padding-right: 8px !important; }
+}

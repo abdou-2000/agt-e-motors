@@ -1,0 +1,138 @@
+/* Style général */
+.services {
+    font-family: 'Arial', sans-serif;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    color: #333;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    color: black; /* Couleur du titre */
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.services h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #2980b9; /* Ligne de décoration sous le titre */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: #f9f9f9;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    color: #2980b9; /* Couleur du titre de la carte */
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.service-card .highlight {
+    background-color: #e3f2fd; /* Fond pour les éléments mis en avant */
+    color: black;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 12px 0;
+}
+
+/* Icônes ou éléments visuels */
+.service-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-card ul li {
+    margin: 6px 0;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card ul li::before {
+    content: "✔";
+    color: #2980b9; /* Couleur de l'icône */
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services {
+        padding: 20px;
+    }
+
+    .services h2 {
+        font-size: 2rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .service-card p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services h2 {
+        font-size: 1.8rem;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+
+
+/* Small-screen fixes for blog visuals */
+@media (max-width: 480px) {
+    #blog .blog-box { padding-bottom: 20px; }
+    #blog .blog-img img { height: auto; }
+    #blog .blog-details a::after { display: none; }
+}
+    .service-card p {
+        font-size: 0.9rem;
+    }
+}

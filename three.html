@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGT E MOTORS</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-order.css">
+
+</head>
+<body>
+    
+    <section id="header">
+        <a href="#">
+            <img class="logo" src="images/logo.png" alt="" width="280" height="140">
+        </a>
+        
+        <nav>
+          <ul id="navbar" role="menubar" aria-label="Main navigation">
+            <li role="none"><a role="menuitem" class="active" href="index.html">Accueil</a></li>
+            <li role="none"><a role="menuitem" href="shop.html">Produits</a></li>
+            <li role="none"><a role="menuitem" href="blog.html">Services</a></li>
+            <li role="none"><a role="menuitem" href="about.html">À propos</a></li>
+            <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+            <li role="none"><a role="menuitem" href="formation.html">Formations</a></li>
+            <li role="none"><a role="menuitem" href="stories.html">Stories</a></li>
+          </ul>
+        </nav>
+        
+   
+    <div id="mobile">
+      <button id="bar" aria-label="Ouvrir le menu" type="button">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+      </section>
+     
+
+<style>
+    /* Force navbar to display properly on desktop */
+    @media (min-width: 800px) {
+        #navbar {
+            display: flex !important;
+            position: relative !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            justify-content: center !important;
+            right: auto !important;
+            top: auto !important;
+            height: auto !important;
+            width: auto !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+        #mobile {
+            display: none !important;
+        }
+    }
+</style>
+
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #f4f4f4;
+              color: white;
+          }
+  
+          .banner {
+              background: linear-gradient(to right, #008000, #00cc00);
+              color: white;
+              padding: 80px 20px;
+              text-align: center;
+          }
+  
+          .banner h1 {
+              font-size: 3em;
+              margin: 0;
+          }
+  
+          .banner p {
+              font-size: 1.5em;
+              margin: 10px 0 0;
+          }
+  
+          .container {
+              max-width: 1200px;
+              margin: 40px auto;
+              padding: 20px;
+              background: white;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              border-radius: 10px;
+          }
+  
+          .section-title {
+              font-size: 2.5em;
+              color: #008000;
+              margin-bottom: 30px;
+              text-align: center;
+          }
+  
+          .features {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 30px;
+              justify-content: center;
+          }
+  
+          .feature {
+              background: #f9f9f9;
+              border: 1px solid #ddd;
+              border-radius: 10px;
+              padding: 25px;
+              flex: 1 1 calc(33.333% - 40px);
+              box-sizing: border-box;
+              text-align: center;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+  
+          .feature:hover {
+              transform: translateY(-10px);
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          }
+  
+          .feature h3 {
+              font-size: 1.8em;
+              color: #008000;
+              margin-bottom: 20px;
+          }
+  
+          .feature p {
+              font-size: 1.1em;
+              color: #666;
+          }
+  
+          .feature img {
+              max-width: 100%;
+              border-radius: 10px;
+              margin-bottom: 20px;
+          }
+  
+          .cta-button {
+              display: inline-block;
+              margin-top: 30px;
+              padding: 15px 30px;
+              background: #008000;
+              color: white;
+              text-decoration: none;
+              border-radius: 5px;
+              font-size: 1.2em;
+              transition: background 0.3s ease;
+          }
+  
+          .cta-button:hover {
+              background: #00cc00;
+          }
+  
+          .info-section {
+              margin-top: 50px;
+              padding: 30px;
+              background: #f9f9f9;
+              border-radius: 10px;
+          }
+  
+          .info-section h2 {
+              font-size: 2em;
+              color: #008000;
+              margin-bottom: 20px;
+          }
+  
+          .info-section p {
+              font-size: 1.1em;
+              color: #666;
+              line-height: 1.8;
+          }
+  
+          .footer {
+              background: #008000;
+              color: white;
+              text-align: center;
+              padding: 30px;
+              margin-top: 60px;
+          }
+  
+          .footer a {
+              color: #ffcc00;
+              text-decoration: none;
+          }
+  
+          .footer a:hover {
+              text-decoration: underline;
+          }
+      </style>
+  
+      <!-- Bannière -->
+      <div class="banner">
+        <h1 style="color: white;">Solutions Photovoltaïques</h1>
+        <p style="color: white;">AGT e-Motors - L'énergie solaire au service de vos projets</p>
+      </div>
+
+      <!-- Section Services Photovoltaïques -->
+      <style>
+          .services-grid {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+              gap: 30px;
+              max-width: 1400px;
+              margin: 60px auto;
+              padding: 0 20px;
+          }
+
+          .service-card {
+              background: white;
+              border-radius: 15px;
+              box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+              cursor: pointer;
+          }
+
+          .service-card:hover {
+              transform: translateY(-10px);
+              box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+          }
+
+          .service-card img {
+              width: 100%;
+              height: 220px;
+              object-fit: cover;
+          }
+
+          .service-card-content {
+              padding: 25px;
+              text-align: center;
+          }
+
+          .service-card-content h3 {
+              color: #008000;
+              font-size: 1.4em;
+              margin-bottom: 15px;
+          }
+
+          .service-card-content p {
+              color: #666;
+              font-size: 1em;
+              line-height: 1.6;
+              margin-bottom: 20px;
+          }
+
+          .service-btn {
+              display: inline-block;
+              padding: 12px 25px;
+              background: #008000;
+              color: white;
+              text-decoration: none;
+              border-radius: 5px;
+              font-weight: 600;
+              transition: background 0.3s ease;
+          }
+
+          .service-btn:hover {
+              background: #00cc00;
+          }
+      </style>
+
+      <div class="services-grid">
+          <div class="service-card">
+              <img src="images/cars/H1.avif" alt="Efficacité Énergétique" loading="lazy">
+              <div class="service-card-content">
+                  <h3>Efficacité Énergétique (EE)</h3>
+                  <p>Optimisation de la consommation d'énergie pour réduire les coûts et améliorer la performance énergétique de vos bâtiments.</p>
+                  <a href="form.html" class="service-btn">En savoir plus</a>
+              </div>
+          </div>
+
+          <div class="service-card">
+              <img src="images/cars/h2.avif" alt="Energy Management System" loading="lazy">
+              <div class="service-card-content">
+                  <h3>Energy Management System (EMS)</h3>
+                  <p>Systèmes de gestion de l'énergie pour surveiller, contrôler et optimiser l'utilisation de l'énergie en temps réel.</p>
+                  <a href="form.html" class="service-btn">En savoir plus</a>
+              </div>
+          </div>
+
+          <div class="service-card">
+              <img src="images/cars/h3.avif" alt="Battery Energy Storage System" loading="lazy">
+              <div class="service-card-content">
+                  <h3>Battery Energy Storage System (BESS)</h3>
+                  <p>Solutions de stockage d'énergie par batteries pour maximiser l'utilisation des énergies renouvelables et assurer une alimentation continue.</p>
+                  <a href="form.html" class="service-btn">En savoir plus</a>
+              </div>
+          </div>
+
+          <div class="service-card">
+              <img src="images/cars/h4.avif" alt="Agrivoltaïsme" loading="lazy">
+              <div class="service-card-content">
+                  <h3>Agrivoltaïsme</h3>
+                  <p>Intégration de panneaux solaires dans les exploitations agricoles pour concilier production d'énergie et activités agricoles.</p>
+                  <a href="form.html" class="service-btn">En savoir plus</a>
+              </div>
+          </div>
+
+          <div class="service-card">
+              <img src="images/cars/h5.avif" alt="Rétrofit" loading="lazy">
+              <div class="service-card-content">
+                  <h3>Rétrofit</h3>
+                  <p>Conversion de véhicules thermiques en véhicules électriques pour une seconde vie écologique et économique.</p>
+                  <a href="form.html" class="service-btn">En savoir plus</a>
+              </div>
+          </div>
+
+          <div class="service-card">
+              <img src="images/products/f5.avif" alt="Isolation thermique" loading="lazy">
+              <div class="service-card-content">
+                  <h3>Isolation thermique</h3>
+                  <p>Solutions d'isolation pour améliorer l'efficacité énergétique de vos bâtiments et réduire vos factures d'énergie.</p>
+                  <a href="form.html" class="service-btn">En savoir plus</a>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Conteneur principal -->
+      <div class="container">
+          <h2 class="section-title">Caractéristiques Techniques</h2>
+  
+          <!-- Section des fonctionnalités -->
+          <div class="features">
+              <div class="feature">
+                  <img src="images/products/aa.jpg" alt="Recharge Semi-Rapide" loading="lazy">
+                  <h3>Recharge Semi-Rapide</h3>
+                  <p>Nos bornes de recharge semi-rapide permettent de recharger un véhicule électrique à 80 % en 4 à 6 heures, selon le modèle. Idéal pour parkings et installations où le véhicule reste stationné plus longtemps.</p>
+              </div>
+              <div class="feature">
+                  <img src="images/products/bb.jpg" alt="Conception légère" loading="lazy">
+                  <h3>Conception Légère</h3>
+                  <p>Design compact et léger, avec un poids réduit facilitant l'installation et le déplacement selon vos besoins.</p>
+              </div>
+              <div class="feature">
+                  <img src="images/products/cc.jpg" alt="Compatibilité universelle" loading="lazy">
+                  <h3>Compatibilité Universelle</h3>
+                  <p>Compatibles avec tous les véhicules électriques du marché, nos bornes garantissent une utilisation universelle et une expérience utilisateur optimale.</p>
+              </div>
+          </div>
+  
+          <!-- Section d'informations supplémentaires -->
+          <div class="info-section">
+              <h2>Informations Complémentaires</h2>
+              <p>La borne de recharge ultrarapide d'AGT e-Motors est conçue pour répondre aux besoins des professionnels et des particuliers. Avec une puissance allant jusqu'à 350 kW, elle est capable de recharger plusieurs véhicules simultanément sans perte de performance.</p>
+              <p><strong>Poids de la borne :</strong> Entre <strong>150 et 250 kg</strong>, selon le modèle et les options choisies. Cette légèreté relative facilite son installation tout en garantissant une stabilité optimale.</p>
+              <p><strong>Options disponibles :</strong> Écran tactile haute résolution, système de paiement intégré, gestion à distance via une application mobile, et bien plus encore.</p>
+              <p>Nous proposons également un service d'installation et de maintenance pour garantir une utilisation sans souci de votre borne de recharge.</p>
+          </div>
+  
+          <!-- Call to Action -->
+          <div style="text-align: center; margin-top: 40px;">
+              <a href="form.html" class="cta-button">Demander un devis</a>
+          </div>
+      </div>
+  
+      <!-- Pied de page -->
+      <div class="footer">
+          <p>&copy; </p>
+      </div>
+ 
+      <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Inscrivez-vous à notre newsletter</h4>
+            <p>Recevez des mises à jour par e-mail sur nos <span>offres spéciales AGT E MOTORS.</span></p>
+        </div>
+        <div class="form">
+            <form action="https://formspree.io/f/mkgozbqy" method="POST" target="_blank" rel="noopener noreferrer" style="display: flex; gap: 10px;">
+                <input type="email" name="email" placeholder="Votre adresse e-mail" required style="flex: 1;">
+                <button type="submit" class="normal">Sign Up</button>
+            </form>
+        </div>
+    </section>
+    
+    
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/logo.png" alt="" width="140" height="70">
+            <h4>Contact</h4>
+            <p><strong>Adresse:</strong> 85 Cité Batrain Ouakam Dakar Sénégal</p>
+            <p><strong>Numeros:</strong> (+221) 78 683 22 94 / 33 910 02 70 / 77 215 99 64 (whatsapp)</p>
+            <p><strong>Heures de travail:</strong> 8h:00 - 17h:00, Lun - Sam</p>
+            <p><strong>À Touba:</strong> Fermé le Vendredi, Samedi 8h - 12h</p>
+            <div class="follow">
+                <h4>Nous suivre</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/share/186LwGu3Wf/" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+                    <a href="https://www.linkedin.com/company/agt-e-motors/" target="_blank"><i class="fab fa-linkedin-in"></i></a>  
+                    <a href="https://youtu.be/EaOlj_1uyvQ?feature=shared" target="_blank"><i class="fab fa-youtube-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>À propos de nous</h4>
+            <a href="about.html" >Qui Sommes-Nous?</a>
+            <a href="poli.html">Politique de Confidentialité</a>
+            <a href="contact.html">Nous Contacter</a>
+        </div>
+        
+        
+        
+       
+        <div class="copyright">
+            <p>Créé par AGT E MOTORS | Tous droits réservés | &#169; 2026</p>
+        </div>
+    </footer>
+    
+    <!-- javascript script file link -->
+    <script src="script.js"></script>
+    </body>
+    </html>

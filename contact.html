@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerce website</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <section id="header">
+        <a href="#">
+            <img class="logo" src="images/logo.png" alt="" width="280" height="140">
+        </a>
+        
+        <nav>
+          <ul id="navbar">
+            <li><a  href="index.html">Accueil</a></li>
+            <li><a href="shop.html">Produits</a></li>
+            <li><a href="blog.html">Services</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+            <li><a href="formation.html">Formations</a></li>
+            <li><a href="stories.html">Stories</a></li>
+            
+          </ul>
+        </nav>
+   
+    <style>
+        /* Force navbar to display properly on desktop */
+        @media (min-width: 800px) {
+            #navbar {
+                display: flex !important;
+                position: relative !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: center !important;
+                right: auto !important;
+                top: auto !important;
+                height: auto !important;
+                width: auto !important;
+                background-color: transparent !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+            }
+            #menu-container {
+                display: none !important;
+            }
+        }
+        /* Style du conteneur du menu */
+        #menu-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Bouton hamburger */
+        #menu-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        #menu-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Menu mobile */
+        #menu-content {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 200px;
+            display: none;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        #menu-content a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display: block;
+            transition: background 0.3s ease;
+        }
+
+        #menu-content a:hover {
+            background: #f4f4f4;
+        }
+
+        /* Classe pour afficher le menu */
+        .menu-open {
+            display: flex !important;
+        }
+    </style>
+
+
+<div id="menu-container">
+    <button id="menu-button" aria-label="Ouvrir le menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav id="menu-content">
+    <a class="active" href="index.html">Accueil</a></li>
+      <a href="shop.html">Produits</a>
+      <a href="blog.html">Services</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html">Contact</a>
+      <a href="formation.html">Formations</a>
+      <a href="stories.html">Stories</a>
+    </nav>
+</div>
+
+<script>
+    document.getElementById("menu-button").addEventListener("click", function() {
+        document.getElementById("menu-content").classList.toggle("menu-open");
+    });
+</script>
+      </section>
+      
+      <style>
+        #navbar {
+          display: flex; /* Affiche le menu sur desktop */
+        }
+      
+        /* Styles pour le menu mobile */
+        #navbar ul {
+          display: none; /* Cache le menu par défaut sur mobile */
+          list-style: none;
+          padding: 0;
+        }
+      
+        #navbar.active ul {
+          display: block; /* Affiche le menu lorsque la classe 'active' est ajoutée */
+        }
+      
+        #mobile {
+          display: none; /* Masque le bouton mobile sur desktop */
+        }
+      
+        /* Affiche le bouton hamburger uniquement sur mobile */
+        @media (max-width: 768px) {
+          #navbar {
+            display: none; /* Cache le menu par défaut sur mobile */
+          }
+          #mobile {
+            display: block; /* Affiche le bouton hamburger sur mobile */
+          }
+        }
+      </style>
+      
+      <script>
+        document.getElementById('bar').addEventListener('click', function() {
+          var navbar = document.getElementById('navbar');
+          navbar.classList.toggle('active');
+        });
+      </script>
+      
+     
+     
+      <section id="contact-details" class="section-p1">
+        <style>
+            /* Styles généraux pour la section */
+            #contact-details {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 40px;
+                padding: 40px 20px;
+                background-color: white;
+                margin: 0 auto;
+                max-width: 1200px;
+                width: 100%;
+            }
+    
+            /* Styles pour la partie détails */
+            .details {
+                flex: 1 1 50%;
+                background-color: #f9f9f9;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+    
+            .details span {
+                font-size: 18px;
+                color: #007BFF;
+                font-weight: bold;
+            }
+    
+            .details h2 {
+                font-size: 28px;
+                margin: 10px 0;
+                color: #333;
+            }
+    
+            .details h3 {
+                font-size: 22px;
+                margin: 20px 0 10px;
+                color: #555;
+            }
+    
+            .details li {
+                list-style: none;
+                margin: 15px 0;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: #777;
+            }
+    
+            .details li i {
+                font-size: 20px;
+                color: green;
+            }
+    
+            .details li p {
+                margin: 0;
+                font-size: 16px;
+            }
+    
+            /* Styles pour la carte de localisation */
+            .map-container {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+    
+            .map-container h3 {
+                font-size: 22px;
+                color: #333;
+                margin-bottom: 15px;
+                font-weight: 600;
+            }
+    
+            /* Styles pour le formulaire des visiteurs */
+            .visitor-form {
+                margin-top: 30px;
+            }
+    
+            .visitor-form label {
+                display: block;
+                margin: 10px 0 5px;
+                font-size: 16px;
+                color: #555;
+            }
+    
+            .visitor-form input,
+            .visitor-form select,
+            .visitor-form textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+    
+            .visitor-form textarea {
+                resize: vertical; /* Permet à l'utilisateur de redimensionner verticalement */
+                min-height: 100px; /* Hauteur minimale */
+            }
+    
+            .visitor-form button {
+                padding: 10px 20px;
+                background-color: green;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+    
+            .visitor-form button:hover {
+                background-color: #0056b3;
+            }
+    
+            /* Responsive design */
+            @media (max-width: 768px) {
+                #contact-details {
+                    flex-direction: column;
+                    padding: 20px;
+                }
+    
+                .details {
+                    flex: 1 1 100%;
+                }
+            }
+        </style>
+    
+        <div class="details">
+            <h2>Contactez-nous</h2>
+           
+            <div>
+                <li>
+                    <i class="fas fa-map"></i>
+                    <p>85 Cité Batrain Ouakam Dakar Sénégal</p>
+                </li>
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <p>contact@agtemotors.com</p>
+                </li>
+                <li>
+                    <i class="fas fa-phone-alt"></i>
+                    <p>(+221) 78 683 22 94 / 33 910 02 70 / 77 215 99 64 (whatsapp)</p>
+                </li>
+                <li>
+                    <i class="fas fa-clock"></i>
+                    <p>8h:00 - 17h:00, Lun - Sam</p>
+                    <p style="margin-top: 5px;"><strong>À Touba:</strong> Fermé le Vendredi, Samedi 8h - 12h</p>
+                </li>
+            </div>
+    
+            <!-- Carte de localisation Google Maps -->
+            <div class="map-container">
+                <h3>Nous Trouver</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3856.4552197210046!2d-15.902203524888897!3d14.855802485661401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTTCsDUxJzIwLjkiTiAxNcKwNTMnNTguNyJX!5e0!3m2!1sfr!2ssn!4v1763199563984!5m2!1sfr!2ssn" width="100%" height="450" style="border:0; border-radius: 10px; margin-top: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+    
+            <!-- Formulaire pour les visiteurs -->
+            <div class="visitor-form">
+                <h3>Enregistrez votre visite</h3>
+                <label for="civility">Civilité</label>
+                <select id="civility" name="civility">
+                    <option value="M.">M.</option>
+                    <option value="Mme">Mme</option>
+                </select>
+    
+                <label for="firstname">Nom complet</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Votre Nom complet" required>
+    
+                <label for="phone">Numéro de téléphone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Votre numéro" required>
+    
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+    
+                <button type="submit">Enregistrer</button>
+            </div>
+        </div>
+        <p>AGT E-Motors ne collectera aucune donnée permettant de vous identifier personnellement, sauf si vous nous les fournissez en remplissant et en soumettant les formulaires disponibles sur notre site Web ou dans une autre section dédiée.
+
+            Ces informations sont strictement confidentielles et conservées par AGT E-Motors. Les données personnelles que vous nous transmettez sont essentielles pour traiter efficacement vos demandes d'informations, de rendez-vous, etc.
+            
+            Ces données sont exclusivement utilisées par AGT E-Motors, ses filiales et son réseau de distribution, à des fins d'enquêtes, d’analyses, de gestion des ventes et de campagnes marketing.
+            
+            Vous disposez d'un droit d'accès et de rectification de vos informations en contactant AGT E-Motors dans votre pays.</p>
+    
+    </section>
+
+  
+    
+        <!--
+        <div class="people">
+            <div>
+                <img src="images/people/1.png" alt="">
+                <p><span>John Doe</span> Senior Marketing Manager<br>Phone: +000 123 000 77 88<br>Email: contact@example.com</p>
+            </div>
+            <div>
+                <img src="images/people/2.png" alt="">
+                <p><span>William Smith</span> Senior Marketing Manager<br>Phone: +000 123 000 77 88<br>Email: contact@example.com</p>
+            </div>
+            <div>
+                <img src="images/people/3.png" alt="">
+                <p><span>Emma Stone</span> Senior Marketing Manager<br>Phone: +000 123 000 77 88<br>Email: contact@example.com</p>
+            </div>
+        </div>
+        -->
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Inscrivez-vous à notre newsletter</h4>
+            <p>Recevez des mises à jour par e-mail sur nos <span>offres spéciales AGT E MOTORS.</span></p>
+        </div>
+        <div class="form">
+            <form action="https://formspree.io/f/mkgozbqy" method="POST" target="_blank" rel="noopener noreferrer" style="display: flex; gap: 10px;">
+                <input type="email" name="email" placeholder="Votre adresse e-mail" required style="flex: 1;">
+                <button type="submit" class="normal">Sign Up</button>
+            </form>
+        </div>
+    </section>
+    
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/logo.png" alt="" width="140" height="70">
+            <h4>Contact</h4>
+            <p><strong>Adresse:</strong> 85 Cité Batrain Ouakam Dakar Sénégal</p>
+            <p><strong>Numeros:</strong> (+221) 78 683 22 94 / 33 910 02 70 / 77 215 99 64 (whatsapp)</p>
+            <p><strong>Heures de travail:</strong> 8h:00 - 17h:00, Lun - Sam</p>
+            <p><strong>À Touba:</strong> Fermé le Vendredi, Samedi 8h - 12h</p>
+            <div class="follow">
+                <h4>Nous suivre</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/share/186LwGu3Wf/" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+                    <a href="https://www.linkedin.com/company/agt-e-motors/" target="_blank"><i class="fab fa-linkedin-in"></i></a>  
+                    <a href="https://youtu.be/EaOlj_1uyvQ?feature=shared" target="_blank"><i class="fab fa-youtube-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>À propos de nous</h4>
+            <a href="about.html" >Qui Sommes-Nous?</a>
+            <a href="poli.html">Politique de Confidentialité</a>
+            <a href="contact.html">Nous Contacter</a>
+        </div>
+        
+        
+        
+       
+        <div class="copyright">
+            <p>Créé par AGT E MOTORS | Tous droits réservés | &#169; 2026</p>
+        </div>
+    </footer>
+
+    <!-- javascript script file link -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGT E MOTORS</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <section id="header">
+        <a href="#">
+            <img class="logo" src="images/logo.png" alt="" width="280" height="140">
+        </a>
+        
+        <nav>
+          <ul id="navbar">
+            <li><a class="active" href="index.html">Accueil</a></li>
+            <li><a href="shop.html">Produits</a></li>
+            <li><a href="blog.html">Services</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="formation.html">Formations</a></li>
+            
+          </ul>
+        </nav>
+   
+    <style>
+        /* Style du conteneur du menu */
+        #menu-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Bouton hamburger */
+        #menu-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        #menu-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Menu mobile */
+        #menu-content {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 200px;
+            display: none;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        #menu-content a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display: block;
+            transition: background 0.3s ease;
+        }
+
+        #menu-content a:hover {
+            background: #f4f4f4;
+        }
+
+        /* Classe pour afficher le menu */
+        .menu-open {
+            display: flex !important;
+        }
+    </style>
+
+
+<div id="menu-container">
+    <button id="menu-button" aria-label="Ouvrir le menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav id="menu-content">
+    <a  href="index.html">Accueil</a></li>
+      <a class="active" href="shop.html">Produits</a>
+      <a href="blog.html">Services</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html">Contact</a>
+      <a href="formation.html">Formations</a>
+    </nav>
+</div>
+
+<script>
+    document.getElementById("menu-button").addEventListener("click", function() {
+        document.getElementById("menu-content").classList.toggle("menu-open");
+    });
+</script>
+      </section>
+      
+    
+    
+    
+
+      
+      <h2>Description</h2>
+      <section class="car-gallery">
+          <!-- Miniatures -->
+          <div class="car-thumbnails">
+              <img src="images/cars/H1.avif" alt="Vue 1" onclick="showCar('images/cars/H1.avif')">
+              <img src="images/cars/h2.avif" alt="Vue 2" onclick="showCar('images/cars/h2.avif')">
+              <img src="images/cars/h3.avif" alt="Vue 3" onclick="showCar('images/cars/h3.avif')">
+              <img src="images/cars/h4.avif" alt="Vue 4" onclick="showCar('images/cars/h4.avif')">
+              <img src="images/cars/h5.avif" alt="Vue 5" onclick="showCar('images/cars/h5.avif')">
+          </div>
+  
+          <!-- Affichage en grand -->
+          <div class="car-display">
+              <img id="large-car-img" src="images/cars/H1.avif" alt="Vue principale">
+              <div class="car-info">
+                  <h2>Blaval Model A</h2>
+                  <p>
+                      La Blaval Model A est une voiture électrique innovante qui allie performance, confort et design moderne.
+                      Conçue pour une conduite fluide et économique, elle intègre les dernières technologies pour garantir une expérience 
+                      exceptionnelle. Dotée d’un intérieur spacieux, de matériaux de qualité et d’une autonomie remarquable, 
+                      elle est idéale pour les trajets quotidiens comme pour les longs voyages.
+                  </p>
+                  <div class="buttons">
+                      <button onclick="window.location.href='form.html'">Demander un devis</button>
+                      <button class="download-pdf" onclick="window.location.href='images/formation/brochure%20Model%20A%20Francais.pdf'">
+                          Télécharger PDF
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      <script>
+          function showCar(imagePath) {
+              document.getElementById('large-car-img').src = imagePath;
+          }
+      </script>
+      <style>
+        /* Style général */
+
+h2 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Galerie de voitures */
+.car-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Miniatures */
+.car-thumbnails {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.car-thumbnails img {
+    width: 100px;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.car-thumbnails img:hover {
+    border-color: #007bff;
+}
+
+/* Affichage en grand */
+.car-display {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+#large-car-img {
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Informations sur la voiture */
+.car-info {
+    max-width: 400px;
+}
+
+.car-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.car-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Boutons */
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.download-pdf {
+    background-color: red;
+}
+
+.download-pdf:hover {
+    background-color: red;
+}
+      
+      /* Responsive: reorder content for small screens */
+      @media (max-width: 768px) {
+        .car-gallery {
+            padding: 12px;
+        }
+
+        /* Make thumbnails horizontally scrollable and first */
+        .car-thumbnails {
+            order: 1;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            gap: 8px;
+            justify-content: flex-start;
+            padding-bottom: 8px;
+        }
+
+        .car-thumbnails img {
+            width: 80px;
+            height: auto;
+            display: inline-block;
+            flex: 0 0 auto;
+        }
+
+        /* Stack the large display under thumbnails */
+        .car-display {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 12px;
+        }
+
+        /* Ensure large image appears before the textual info */
+        #large-car-img {
+            order: 2;
+            width: 100%;
+            max-width: 720px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Car info becomes full width below the image */
+        .car-info {
+            order: 3;
+            width: 100%;
+            max-width: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: stretch;
+            padding: 0 8px 8px;
+        }
+
+        /* Explicit ordering inside .car-info to ensure title then text then buttons */
+        .car-info h2 { order: 1; text-align: center; }
+        .car-info p { order: 2; }
+        .car-info .buttons { order: 3; justify-content: center; }
+
+        /* Buttons: center and allow wrap if needed */
+        .buttons {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .buttons button {
+            width: auto;
+            min-width: 140px;
+        }
+
+        /* Reduce large image shadow and padding on small screens */
+        #large-car-img { box-shadow: none; }
+      }
+
+      </style>
+   
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Inscrivez-vous à notre newsletter</h4>
+            <p>Recevez des mises à jour par e-mail sur nos <span>offres spéciales AGT E MOTORS.</span></p>
+        </div>
+        <div class="form">
+            <form action="https://formspree.io/f/mkgozbqy" method="POST" target="_blank" rel="noopener noreferrer" style="display: flex; gap: 10px;">
+                <input type="email" name="email" placeholder="Votre adresse e-mail" required style="flex: 1;">
+                <button type="submit" class="normal">Sign Up</button>
+            </form>
+        </div>
+    </section>
+  
+
+    
+
+    
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/logo.png" alt="" width="140" height="70">
+            <h4>Contact</h4>
+            <p><strong>Adresse:</strong> 85 Cité Batrain Ouakam Dakar Sénégal</p>
+            <p><strong>Numeros:</strong> (+221) 78 683 22 94 / 33 910 02 70 / 77 215 99 64 (whatsapp)</p>
+            <p><strong>Heures de travail:</strong> 8h:00 - 17h:00, Lun - Sam</p>
+            <p><strong>À Touba:</strong> Fermé le Vendredi, Samedi 8h - 12h</p>
+            <div class="follow">
+                <h4>Nous suivre</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/share/186LwGu3Wf/" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+                    <a href="https://www.linkedin.com/company/agt-e-motors/" target="_blank"><i class="fab fa-linkedin-in"></i></a>  
+                    <a href="https://youtu.be/EaOlj_1uyvQ?feature=shared" target="_blank"><i class="fab fa-youtube-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>À propos de nous</h4>
+            <a href="about.html" >Qui Sommes-Nous?</a>
+            <a href="poli.html">Politique de Confidentialité</a>
+            <a href="contact.html">Nous Contacter</a>
+        </div>
+        
+        
+        
+       
+        <div class="copyright">
+            <p>Créé par AGT E MOTORS | Tous droits réservés | &#169; 2026</p>
+        </div>
+    </footer>
+
+    <!-- javascript script file link -->
+    <script src="script.js"></script>
+
+</html>

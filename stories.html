@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories - AGT E MOTORS</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-order.css">
+
+    <style>
+        /* Force navbar to display properly on desktop */
+        @media (min-width: 800px) {
+            #navbar {
+                display: flex !important;
+                position: relative !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: center !important;
+                right: auto !important;
+                top: auto !important;
+                height: auto !important;
+                width: auto !important;
+                background-color: transparent !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+            }
+            #mobile {
+                display: none !important;
+            }
+        }
+        body {
+            background: #ffffff;
+        }
+
+        .stories-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .stories-header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .stories-header h1 {
+            font-size: 2em;
+            color: #008000;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .stories-header p {
+            font-size: 1.2em;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .video-section {
+            margin: 40px auto;
+            max-width: 1400px;
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15), 0 0 20px rgba(8, 129, 120, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .video-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.2), 0 0 30px rgba(8, 129, 120, 0.2);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            border: 3px solid #088178;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-description {
+            margin-top: 30px;
+            text-align: center;
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 15px;
+            border-left: 4px solid #088178;
+        }
+
+        .video-description h2 {
+            background: linear-gradient(135deg, #088178 0%, #00b4a0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .video-description p {
+            color: #444;
+            font-size: 1.1em;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 10px auto;
+        }
+
+        .video-description strong {
+            color: #088178;
+            font-weight: 600;
+        }
+
+        .video-description ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .video-description ul li {
+            padding: 12px 20px;
+            margin: 8px 0;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 45px;
+        }
+
+        .video-description ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            color: white;
+            background: linear-gradient(135deg, #088178, #00b4a0);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .video-description ul li:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 15px rgba(8, 129, 120, 0.3);
+            background: #f9f9f9;
+        }
+
+        .video-description a {
+            color: #088178;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .video-description a:hover {
+            color: #00b4a0;
+            border-bottom: 2px solid #088178;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .stories-header h1 {
+                font-size: 2.2em;
+            }
+            
+            .video-section {
+                padding: 25px;
+            }
+            
+            .video-description h2 {
+                font-size: 1.6em;
+            }
+
+            .video-description ul li {
+                padding-left: 40px;
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <section id="header">
+        <a href="#">
+            <img class="logo" src="images/logo.png" alt="AGT E MOTORS" loading="lazy">
+        </a>
+        
+        <nav>
+            <ul id="navbar" role="menubar" aria-label="Main navigation">
+                <li role="none"><a role="menuitem" href="index.html">Accueil</a></li>
+                <li role="none"><a role="menuitem" href="shop.html">Produits</a></li>
+                <li role="none"><a role="menuitem" href="blog.html">Services</a></li>
+                <li role="none"><a role="menuitem" href="about.html">À propos</a></li>
+                <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+                <li role="none"><a role="menuitem" href="formation.html">Formations</a></li>
+                <li role="none"><a class="active" role="menuitem" href="stories.html">Stories</a></li>
+            </ul>
+        </nav>
+   
+        <div id="mobile">
+            <button id="bar" aria-label="Ouvrir le menu" type="button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </section>
+
+    <div class="stories-container">
+        <div class="stories-header">
+            <h1>Nos Stories</h1>
+            <p>Découvrez nos dernières actualités, innovations et témoignages sur la mobilité électrique au Sénégal et en Afrique de l'Ouest.</p>
+        </div>
+
+        <div class="video-section">
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/fbHKXM5iKv0" 
+                    title="AGT E MOTORS - Notre Histoire" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="video-section">
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/_JtnbuPx67s" 
+                    title="AGT E MOTORS - Nos Stories" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="video-section">
+            <div class="video-description">
+                <h2>AGT E-MOTORS</h2>
+                <p><strong>L'innovation au service du transport en Afrique</strong></p>
+                <p>La transition énergétique est notre expertise reconnue</p>
+                <p>Les énergies renouvelables constituent notre domaine de spécialisation</p>
+                <p style="margin-top: 20px;"><strong>Nous vous accompagnons à chaque étape de la chaîne de valeur de la transition énergétique :</strong></p>
+                <ul style="list-style-position: inside; text-align: left; max-width: 800px; margin: 15px auto; line-height: 1.8;">
+                    <li>Optimisation de l'efficacité énergétique</li>
+                    <li>Gestion intégrée de l'énergie</li>
+                    <li>Solutions photovoltaïques avancées</li>
+                    <li>Développement de l'agri-voltaïque</li>
+                    <li>Infrastructures modernes de recharge</li>
+                    <li>Véhicules électriques, du deux-roues aux camions, sans oublier les autobus électriques</li>
+                </ul>
+                <p style="margin-top: 25px;"><strong>Pour plus d'informations :</strong> <a href="https://agtemotors.com" target="_blank" style="color: #088178; text-decoration: none;">agtemotors.com</a></p>
+                <p><strong>Contact :</strong> <a href="mailto:contact@agtemotors.com" style="color: #088178; text-decoration: none;">contact@agtemotors.com</a></p>
+                <p><strong>Téléphone direct :</strong> <a href="tel:+221786832294" style="color: #088178; text-decoration: none;">+221 78 683 22 94</a></p>
+                <p><strong>WhatsApp :</strong> <a href="https://wa.me/221772159964" target="_blank" style="color: #088178; text-decoration: none;">+221 77 215 99 64</a></p>
+            </div>
+        </div>
+    </div>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Inscrivez-vous à notre newsletter</h4>
+            <p>Recevez des mises à jour par e-mail sur nos <span>offres spéciales AGT E MOTORS.</span></p>
+        </div>
+        <div class="form">
+            <form action="https://formspree.io/f/mkgozbqy" method="POST" target="_blank" rel="noopener noreferrer" style="display: flex; gap: 10px;">
+                <input type="email" name="email" placeholder="Votre adresse e-mail" required style="flex: 1;">
+                <button type="submit" class="normal">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/logo.png" alt="" width="140" height="70">
+            <h4>Contact</h4>
+            <p><strong>Adresse:</strong> 85 Cité Batrain Ouakam Dakar Sénégal</p>
+            <p><strong>Numeros:</strong> (+221) 78 683 22 94 / 33 910 02 70 / 77 215 99 64 (whatsapp)</p>
+            <p><strong>Heures de travail:</strong> 8h:00 - 17h:00, Lun - Sam</p>
+            <p><strong>À Touba:</strong> Fermé le Vendredi, Samedi 8h - 12h</p>
+            <div class="follow">
+                <h4>Nous suivre</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/share/186LwGu3Wf/" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+                    <a href="https://www.linkedin.com/company/agt-e-motors/" target="_blank"><i class="fab fa-linkedin-in"></i></a>  
+                    <a href="https://youtu.be/EaOlj_1uyvQ?feature=shared" target="_blank"><i class="fab fa-youtube-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>À propos de nous</h4>
+            <a href="about.html">Qui Sommes-Nous?</a>
+            <a href="poli.html">Politique de Confidentialité</a>
+            <a href="contact.html">Nous Contacter</a>
+        </div>
+        
+        <div class="copyright">
+            <p>Créé par AGT E MOTORS | Tous droits réservés | &#169; 2026</p>
+        </div>
+    </footer>
+
+    <!-- javascript script file link -->
+    <script src="script.js"></script>
+</body>
+</html>

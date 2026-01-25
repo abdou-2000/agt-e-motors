@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerce website</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <section id="header">
+        <a href="#">
+            <img class="logo" src="images/logo.png" alt="" width="280" height="140">
+        </a>
+        
+        <nav>
+          <ul id="navbar">
+            <li><a class="active" href="index.html">Accueil</a></li>
+            <li><a href="shop.html">Produits</a></li>
+            <li><a href="blog.html">Services</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="formation.html">Formations</a></li>
+            
+          </ul>
+        </nav>
+   
+    <style>
+        /* Style du conteneur du menu */
+        #menu-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Bouton hamburger */
+        #menu-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        #menu-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Menu mobile */
+        #menu-content {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 200px;
+            display: none;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        #menu-content a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display: block;
+            transition: background 0.3s ease;
+        }
+
+        #menu-content a:hover {
+            background: #f4f4f4;
+        }
+
+        /* Classe pour afficher le menu */
+        .menu-open {
+            display: flex !important;
+        }
+    </style>
+
+
+<div id="menu-container">
+    <button id="menu-button" aria-label="Ouvrir le menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav id="menu-content">
+    <a  href="index.html">Accueil</a></li>
+      <a href="shop.html">Produits</a>
+      <a href="blog.html">Services</a>
+      <a href="about.html">À propos</a>
+      <a class="active" href="contact.html">Contact</a>
+      <a href="formation.html">Formations</a>
+    </nav>
+</div>
+
+<script>
+    document.getElementById("menu-button").addEventListener("click", function() {
+        document.getElementById("menu-content").classList.toggle("menu-open");
+    });
+</script>
+      </section>
+      
+ 
+   
+    <section class="privacy-policy">
+        <h2>Politique de Confidentialité – AGT E MOTORS</h2>
+    
+        <h3>1. Collecte des Données Personnelles</h3>
+        <p>AGT E MOTORS collecte certaines informations personnelles lorsque vous utilisez nos services, notamment votre nom, adresse e-mail, numéro de téléphone et toute autre donnée nécessaire à la gestion de nos prestations.</p>
+    
+        <h3>2. Utilisation des Données</h3>
+        <p>Vos informations personnelles sont utilisées uniquement dans le cadre de :</p>
+        <ul>
+            <li>La gestion de nos services et communications avec nos clients.</li>
+            <li>L’amélioration de l’expérience utilisateur et la personnalisation de nos offres.</li>
+            <li>Le respect des obligations légales et réglementaires.</li>
+        </ul>
+    
+        <h3>3. Partage des Données</h3>
+        <p>AGT E MOTORS ne vend ni ne loue vos données personnelles à des tiers. Elles peuvent être partagées avec nos partenaires et prestataires de services dans le strict cadre de l’exécution de nos services.</p>
+    
+        <h3>4. Sécurité et Protection des Données</h3>
+        <p>Nous mettons en place des mesures de sécurité adaptées pour protéger vos informations contre tout accès non autorisé, modification, divulgation ou destruction.</p>
+    
+        <h3>5. Droits des Utilisateurs</h3>
+        <p>Vous disposez d’un droit d’accès, de rectification, de suppression et de portabilité de vos données. Vous pouvez également vous opposer à leur traitement en nous contactant à <strong>contact@agtemotors.com</strong>.</p>
+    
+        <h3>6. Cookies et Technologies Similaires</h3>
+        <p>Notre site utilise des cookies afin d’améliorer votre navigation et d’analyser notre audience. Vous pouvez gérer vos préférences via les paramètres de votre navigateur.</p>
+    
+        <h3>7. Modifications de la Politique de Confidentialité</h3>
+        <p>AGT E MOTORS se réserve le droit de modifier cette politique pour garantir sa conformité aux évolutions légales et réglementaires. Toute mise à jour sera publiée sur notre site.</p>
+    
+        <p>Pour toute question, contactez-nous à <strong>contact@agtemotors.com</strong>.</p>
+    </section>
+    
+    <style>
+        .privacy-policy {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .privacy-policy h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
+    
+        .privacy-policy h3 {
+            color: #34495e;
+            margin-top: 15px;
+        }
+    
+        .privacy-policy p, .privacy-policy ul {
+            color: #555;
+            line-height: 1.6;
+        }
+    
+        .privacy-policy ul {
+            padding-left: 20px;
+        }
+    
+        .privacy-policy strong {
+            color: #e74c3c;
+        }
+    </style>
+    
+    
+
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+          <h4>Inscrivez-vous à notre newsletter</h4>
+          <p>Recevez des mises à jour par e-mail sur nos <span>offres spéciales AGT E MOTORS.</span></p>
+      </div>
+      <div class="form">
+          <form action="https://formspree.io/f/mkgozbqy" method="POST" target="_blank" rel="noopener noreferrer" style="display: flex; gap: 10px;">
+              <input type="email" name="email" placeholder="Votre adresse e-mail" required style="flex: 1;">
+              <button type="submit" class="normal">Sign Up</button>
+          </form>
+      </div>
+  </section>
+  
+
+  <footer class="section-p1">
+      <div class="col">
+          <img class="logo" src="images/logo.png" alt="" width="140" height="70">
+          <h4>Contact</h4>
+          <p><strong>Adresse:</strong> 85 Cité Batrain Ouakam Dakar Sénégal</p>
+          <p><strong>Numeros:</strong> (+221) 78 683 22 94 / 33 910 02 70 / 77 215 99 64 (whatsapp)</p>
+          <p><strong>Heures de travail:</strong> 8h:00 - 17h:00, Lun - Sam</p>
+          <p><strong>À Touba:</strong> Fermé le Vendredi, Samedi 8h - 12h</p>
+          <div class="follow">
+              <h4>Nous suivre</h4>
+              <div class="icon">
+                  <a href="https://www.facebook.com/share/186LwGu3Wf/" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+                  <a href="https://www.linkedin.com/company/agt-e-motors/" target="_blank"><i class="fab fa-linkedin-in"></i></a>  
+                  <a href="https://youtu.be/EaOlj_1uyvQ?feature=shared" target="_blank"><i class="fab fa-youtube-square"></i></a>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+          <h4>À propos de nous</h4>
+          <a href="about.html" >Qui Sommes-Nous?</a>
+          <a href="poli.html">Politique de Confidentialité</a>
+          <a href="contact.html">Nous Contacter</a>
+      </div>
+      
+      
+      
+     
+      <div class="copyright">
+          <p>Créé par AGT E MOTORS | Tous droits réservés | &#169; 2026</p>
+      </div>
+  </footer>
+
+  <!-- javascript script file link -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGT E MOTORS</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile-order.css">
+
+</head>
+
+<body>
+
+  <section id="header">
+    <a href="#">
+      <img src="images/logo.png" class="logo" alt="Logo">
+    </a>
+    
+    <nav>
+      <ul id="navbar">
+        <li><a class="active" href="index.html">Accueil</a></li>
+        <li><a href="shop.html">Produits</a></li>
+        <li><a href="blog.html">Services</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="formation.html">Formations</a></li>
+        <li id="lg-bag">
+          <a href="cart.html">
+            <i class="far fa-shopping-bag"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  
+    <div id="mobile">
+      <a href="cart.html">
+        <i class="far fa-shopping-bag"></i>
+      </a>
+      <!-- Bouton hamburger -->
+      <button id="bar" aria-label="Ouvrir le menu" type="button">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </section>
+  
+  <style>
+    #navbar {
+      display: flex; /* Affiche le menu sur desktop */
+    }
+  
+    /* Styles pour le menu mobile */
+    #navbar ul {
+      display: none; /* Cache le menu par défaut sur mobile */
+      list-style: none;
+      padding: 0;
+    }
+  
+    #navbar.active ul {
+      display: block; /* Affiche le menu lorsque la classe 'active' est ajoutée */
+    }
+  
+    #mobile {
+      display: none; /* Masque le bouton mobile sur desktop */
+    }
+  
+    /* Affiche le bouton hamburger uniquement sur mobile */
+    @media (max-width: 768px) {
+      #navbar {
+        display: none; /* Cache le menu par défaut sur mobile */
+      }
+      #mobile {
+        display: block; /* Affiche le bouton hamburger sur mobile */
+      }
+    }
+  </style>
+  
+  <script>
+    document.getElementById('bar').addEventListener('click', function() {
+      var navbar = document.getElementById('navbar');
+      navbar.classList.toggle('active');
+    });
+  </script>
+  
+ 
+
+    <section id="productdetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="images/products/m16.webp" width="100%" id="MainImg" alt="">
+            <div class="small-image-group">
+                <div class="small-img-col">
+                    <img src="images/products/c1.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="images/products/c2.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="images/products/c3.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="images/products/c4.jpg" width="100%" class="small-img" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="single-pro-details">
+            <h6>Isolation thermique</h6>
+            <h4>Isolation thermique</h4>
+            <h2></h2>
+        
+            <!-- Champ pour sélectionner la quantité -->
+            <label for="product-quantity">Quantité :</label>
+            <input id="product-quantity" type="number" value="1" min="1" style="margin: 10px 0; padding: 5px; width: 60px;">
+        
+            <!-- Bouton pour ajouter au panier -->
+            <button 
+                onclick="addToCart({
+                    name: 'Isolation thermique',
+                  
+                    quantity: parseInt(document.getElementById('product-quantity').value, 10),
+                    image: 'images/products/f1.jpg' // Chemin vers l'image
+                })" 
+                style="padding: 12px 24px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Demander un devis
+            </button>
+            <h4>Détails du produit</h4>
+            <span>AGT E MOTORS propose un service d'isolation thermique performant, visant à améliorer l'efficacité énergétique des bâtiments. Grâce à des matériaux innovants et des techniques avancées, l'entreprise optimise le confort thermique en réduisant les pertes de chaleur en hiver et en limitant la surchauffe en été. Cette solution permet de réaliser des économies d'énergie significatives tout en diminuant l'empreinte carbone du bâtiment. AGT E MOTORS accompagne ses clients à chaque étape du projet, de l'audit thermique à la mise en œuvre des solutions les plus adaptées à leurs besoins.
+            </span>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Inscrivez-vous à notre newsletter</h4>
+            <p>Recevez des mises à jour par e-mail sur notre dernière boutique et nos <span>offres spéciales d'AGT E MOTORS.</span></p>
+        </div>
+        <div class="form">
+            <form action="https://formspree.io/f/mkgozbqy" method="POST" target="_blank" rel="noopener noreferrer" style="display: flex; gap: 10px;">
+                <input type="email" name="email" placeholder="Votre adresse e-mail" required style="flex: 1;">
+                <button type="submit" class="normal">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Adresse:</strong> 85 Cité Batrain Ouakam Dakar Sénégal</p>
+            <p><strong>Numeros:</strong> (+221) 78 683 22 94 / 33 910 02 70 / 77 215 99 64 (whatsapp)</p>
+            <p><strong>Heures de travail:</strong> 8h:00 - 17h:00, Lun - Sam</p>
+            <p><strong>À Touba:</strong> Fermé le Vendredi, Samedi 8h - 12h</p>
+            <div class="follow">
+                <h4>Nous suivre</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/share/186LwGu3Wf/" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+                    <a href="https://www.linkedin.com/company/agt-e-motors/" target="_blank"><i class="fab fa-linkedin-in"></i></a>  
+                    <a href="https://youtu.be/EaOlj_1uyvQ?feature=shared" target="_blank"><i class="fab fa-youtube-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>À propos de nous</h4>
+            <a href="about.html">Qui Sommes-Nous?</a>
+            <a href="poli.html">Politique de Confidentialité</a>
+            <a href="contact.html">Nous Contacter</a>
+        </div>
+        
+        
+       
+        <div class="copyright">
+            <p>Créé par AGT E MOTORS | Tous droits réservés | &#169; 2026</p>
+        </div>
+    </footer>
+
+    <!-- javascript script file code -->
+    <script>
+        var mainImg = document.getElementById("MainImg");
+        var smallImg = document.getElementsByClassName("small-img");
+        smallImg[0].onclick = function() {
+            mainImg.src = smallImg[0].src;
+        }
+        smallImg[1].onclick = function () {
+            mainImg.src = smallImg[1].src;
+        }
+        smallImg[2].onclick = function () {
+            mainImg.src = smallImg[2].src;
+        }
+        smallImg[3].onclick = function () {
+            mainImg.src = smallImg[3].src;
+        }
+    </script>
+
+    <!-- javascript script file link -->
+    <script src="script.js"></script>
+</body>
+
+</html>

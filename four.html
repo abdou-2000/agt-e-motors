@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGT E MOTORS</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-order.css">
+
+</head>
+<body>
+    
+    <section id="header">
+        <a href="#">
+            <img class="logo" src="images/logo.png" alt="" width="280" height="140">
+        </a>
+        
+        <nav>
+          <ul id="navbar">
+            <li><a class="active" href="index.html">Accueil</a></li>
+            <li><a href="shop.html">Produits</a></li>
+            <li><a href="blog.html">Services</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="formation.html">Formations</a></li>
+            
+          </ul>
+        </nav>
+   
+    <style>
+        /* Style du conteneur du menu */
+        #menu-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Bouton hamburger */
+        #menu-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        #menu-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Menu mobile */
+        #menu-content {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 200px;
+            display: none;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        #menu-content a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display: block;
+            transition: background 0.3s ease;
+        }
+
+        #menu-content a:hover {
+            background: #f4f4f4;
+        }
+
+        /* Classe pour afficher le menu */
+        .menu-open {
+            display: flex !important;
+        }
+    </style>
+
+
+<div id="menu-container">
+    <button id="menu-button" aria-label="Ouvrir le menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav id="menu-content">
+    <a  href="index.html">Accueil</a></li>
+      <a class="active" href="shop.html">Produits</a>
+      <a href="blog.html">Services</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html">Contact</a>
+      <a href="formation.html">Formations</a>
+    </nav>
+</div>
+
+<script>
+    document.getElementById("menu-button").addEventListener("click", function() {
+        document.getElementById("menu-content").classList.toggle("menu-open");
+    });
+</script>
+      </section>
+     
+
+
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #f4f4f4;
+              color: white;
+          }
+  
+          .banner {
+              background: linear-gradient(to right, #008000, #00cc00);
+              color: white;
+              padding: 80px 20px;
+              text-align: center;
+          }
+  
+          .banner h1 {
+              font-size: 3em;
+              margin: 0;
+          }
+  
+          .banner p {
+              font-size: 1.5em;
+              margin: 10px 0 0;
+          }
+  
+          .container {
+              max-width: 1200px;
+              margin: 40px auto;
+              padding: 20px;
+              background: white;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              border-radius: 10px;
+          }
+  
+          .section-title {
+              font-size: 2.5em;
+              color: #008000;
+              margin-bottom: 30px;
+              text-align: center;
+          }
+  
+          .features {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 30px;
+              justify-content: center;
+          }
+  
+          .feature {
+              background: #f9f9f9;
+              border: 1px solid #ddd;
+              border-radius: 10px;
+              padding: 25px;
+              flex: 1 1 calc(33.333% - 40px);
+              box-sizing: border-box;
+              text-align: center;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+  
+          .feature:hover {
+              transform: translateY(-10px);
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          }
+  
+          .feature h3 {
+              font-size: 1.8em;
+              color: #008000;
+              margin-bottom: 20px;
+          }
+  
+          .feature p {
+              font-size: 1.1em;
+              color: #666;
+          }
+  
+          .feature img {
+              max-width: 100%;
+              border-radius: 10px;
+              margin-bottom: 20px;
+          }
+  
+          .cta-button {
+              display: inline-block;
+              margin-top: 30px;
+              padding: 15px 30px;
+              background: #008000;
+              color: white;
+              text-decoration: none;
+              border-radius: 5px;
+              font-size: 1.2em;
+              transition: background 0.3s ease;
+          }
+  
+          .cta-button:hover {
+              background: #00cc00;
+          }
+  
+          .info-section {
+              margin-top: 50px;
+              padding: 30px;
+              background: #f9f9f9;
+              border-radius: 10px;
+          }
+  
+          .info-section h2 {
+              font-size: 2em;
+              color: #008000;
+              margin-bottom: 20px;
+          }
+  
+          .info-section p {
+              font-size: 1.1em;
+              color: #666;
+              line-height: 1.8;
+          }
+  
+          .footer {
+              background: #008000;
+              color: white;
+              text-align: center;
+              padding: 30px;
+              margin-top: 60px;
+          }
+  
+          .footer a {
+              color: #ffcc00;
+              text-decoration: none;
+          }
+  
+          .footer a:hover {
+              text-decoration: underline;
+          }
+      </style>
+  
+      <!-- Bannière -->
+      <div class="banner">
+        <h1 style="color: white;">Bornes de Recharge Rapides</h1>
+        <p style="color: white;">AGT e-Motors - Des solutions de recharge rapide pour une mobilité électrique accessible</p>
+    </div>
+    
+    <!-- Conteneur principal -->
+    <div class="container">
+        <h2 class="section-title">Caractéristiques Techniques</h2>
+    
+        <!-- Section des fonctionnalités -->
+        <div class="features">
+            <div class="feature">
+                <img src="images/products/dd.jpg" alt="Borne de recharge rapide" loading="lazy">
+                <h3>Recharge Rapide</h3>
+                <p>Nos bornes de recharge rapide permettent de recharger un véhicule électrique à 80 % en seulement 1 à 2 heures, selon le modèle. Parfait pour les parkings d'entreprises, centres commerciaux et lieux publics.</p>
+            </div>
+            <div class="feature">
+                <img src="images/products/ee.jpg" alt="Conception compacte" loading="lazy">
+                <h3>Conception Compacte</h3>
+                <p>Design compact et léger, avec un poids variant entre 50 kg et 100 kg, facilitant l'installation et l'intégration dans des espaces réduits.</p>
+            </div>
+            <div class="feature">
+                <img src="images/products/ff.jpg" alt="Compatibilité universelle" loading="lazy">
+                <h3>Compatibilité Universelle</h3>
+                <p>Compatibles avec tous les véhicules électriques du marché, nos bornes garantissent une utilisation universelle et une expérience utilisateur optimale.</p>
+            </div>
+        </div>
+    
+        <!-- Section d'informations supplémentaires -->
+        <div class="info-section">
+            <h2>Informations Complémentaires</h2>
+            <p>Les bornes de recharge rapide d'AGT e-Motors sont conçues pour répondre aux besoins des professionnels et des particuliers. Avec une puissance allant de 22 kW à 50 kW, elles offrent une solution de recharge fiable et efficace pour les véhicules électriques.</p>
+            <p><strong>Poids de la borne :</strong> Nos bornes sont disponibles en plusieurs modèles, avec des poids variant entre <strong>50 kg, 80 kg et 100 kg</strong>. Cette légèreté facilite leur installation tout en garantissant une stabilité optimale.</p>
+            <p><strong>Options disponibles :</strong> Écran tactile intuitif, système de paiement intégré, gestion à distance via une application mobile, et bien plus encore. Nos bornes sont également résistantes aux intempéries, adaptées à une utilisation en extérieur.</p>
+            <p>Nous proposons un service complet d'installation et de maintenance pour assurer une utilisation sans souci de votre borne de recharge.</p>
+        </div>
+    </div>
+          <!-- Call to Action -->
+          <div style="text-align: center; margin-top: 40px;">
+              <a href="form.html" class="cta-button">Demander un devis</a>
+          </div>
+      </div>
+  
+      <!-- Pied de page -->
+      <div class="footer">
+          <p>&copy; </p>
+      </div>
+ 
+      <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Inscrivez-vous à notre newsletter</h4>
+            <p>Recevez des mises à jour par e-mail sur nos <span>offres spéciales AGT E MOTORS.</span></p>
+        </div>
+        <div class="form">
+            <form action="https://formspree.io/f/mkgozbqy" method="POST" target="_blank" rel="noopener noreferrer" style="display: flex; gap: 10px;">
+                <input type="email" name="email" placeholder="Votre adresse e-mail" required style="flex: 1;">
+                <button type="submit" class="normal">Sign Up</button>
+            </form>
+        </div>
+    </section>
+    
+    
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/logo.png" alt="" width="140" height="70">
+            <h4>Contact</h4>
+            <p><strong>Adresse:</strong> 85 Cité Batrain Ouakam Dakar Sénégal</p>
+            <p><strong>Numeros:</strong> (+221) 78 683 22 94 / 33 910 02 70 / 77 215 99 64 (whatsapp)</p>
+            <p><strong>Heures de travail:</strong> 8h:00 - 17h:00, Lun - Sam</p>
+            <p><strong>À Touba:</strong> Fermé le Vendredi, Samedi 8h - 12h</p>
+            <div class="follow">
+                <h4>Nous suivre</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/share/186LwGu3Wf/" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+                    <a href="https://www.linkedin.com/company/agt-e-motors/" target="_blank"><i class="fab fa-linkedin-in"></i></a>  
+                    <a href="https://youtu.be/EaOlj_1uyvQ?feature=shared" target="_blank"><i class="fab fa-youtube-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>À propos de nous</h4>
+            <a href="about.html" >Qui Sommes-Nous?</a>
+            <a href="poli.html">Politique de Confidentialité</a>
+            <a href="contact.html">Nous Contacter</a>
+        </div>
+        
+        
+        
+       
+        <div class="copyright">
+            <p>Créé par AGT E MOTORS | Tous droits réservés | &#169; 2026</p>
+        </div>
+    </footer>
+    
+    <!-- javascript script file link -->
+    <script src="script.js"></script>
+    </body>
+    </html>

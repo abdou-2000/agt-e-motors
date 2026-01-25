@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGT E MOTORS</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+   
+
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="#">
+            <img class="logo" src="images/logo.png" alt="" width="" height="70">
+        </a>
+        
+        <nav>
+          <ul id="navbar">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="shop.html">Produits</a></li>
+            <li><a href="blog.html">Services</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a class="active"  href="formation.html">Formations</a></li>
+            <li><a href="stories.html">Stories</a></li>
+          </ul>
+        </nav>
+      
+        <div id="menu-container">
+            <button id="menu-button" aria-label="Ouvrir le menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="menu-content">
+            <a href="index.html">Accueil</a></li>
+              <a href="shop.html">Produits</a>
+              <a href="blog.html">Services</a>
+              <a href="about.html">À propos</a>
+              <a href="contact.html">Contact</a>
+              <a  href="formation.html">Formations</a>
+              <a href="stories.html">Stories</a>
+            </nav>
+        </div>
+        
+        <script>
+            document.getElementById("menu-button").addEventListener("click", function() {
+                document.getElementById("menu-content").classList.toggle("menu-open");
+            });
+        </script>
+      </section>
+      
+      <style>
+        /* Force navbar to display properly on desktop */
+        @media (min-width: 800px) {
+            #navbar {
+                display: flex !important;
+                position: relative !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: center !important;
+                right: auto !important;
+                top: auto !important;
+                height: auto !important;
+                width: auto !important;
+                background-color: transparent !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+            }
+            #menu-container {
+                display: none !important;
+            }
+        }
+        #navbar {
+          display: flex; /* Affiche le menu sur desktop */
+        }
+      
+        /* Styles pour le menu mobile */
+        #navbar ul {
+          display: none; /* Cache le menu par défaut sur mobile */
+          list-style: none;
+          padding: 0;
+        }
+      
+        #navbar.active ul {
+          display: block; /* Affiche le menu lorsque la classe 'active' est ajoutée */
+        }
+      
+        #mobile {
+          display: none; /* Masque le bouton mobile sur desktop */
+        }
+      
+        /* Affiche le bouton hamburger uniquement sur mobile */
+        @media (max-width: 768px) {
+          #navbar {
+            display: none; /* Cache le menu par défaut sur mobile */
+          }
+          #mobile {
+            display: block; /* Affiche le bouton hamburger sur mobile */
+          }
+        }
+      </style>
+      
+      <script>
+        document.getElementById('bar').addEventListener('click', function() {
+          var navbar = document.getElementById('navbar');
+          navbar.classList.toggle('active');
+        });
+      </script>
+      
+     <style>
+        /* Style du conteneur du menu */
+        #menu-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Bouton hamburger */
+        #menu-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        #menu-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Menu mobile */
+        #menu-content {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 200px;
+            display: none;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        #menu-content a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display: block;
+            transition: background 0.3s ease;
+        }
+
+        #menu-content a:hover {
+            background: #f4f4f4;
+        }
+
+        /* Classe pour afficher le menu */
+        .menu-open {
+            display: flex !important;
+        }
+    </style>
+
+
+    <section class="project-presentation">
+        <style>
+            .project-presentation {
+                font-family: 'Arial', sans-serif;
+            
+                padding: 40px;
+                border-radius: 15px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                max-width: 900px;
+                margin: 0 auto;
+                color: #333;
+            }
+            .project-presentation h1 {
+                font-size: 2.5rem;
+                color: green; /* Vert foncé */
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .project-presentation h2 {
+                font-size: 1.8rem;
+                color:green; /* Bleu */
+                margin-top: 30px;
+                margin-bottom: 15px;
+            }
+            .project-presentation p {
+                font-size: 1.1rem;
+                line-height: 1.6;
+                margin-bottom: 20px;
+            }
+            .project-presentation ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            .project-presentation ul li {
+                
+                margin: 10px 0;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+            }
+            .project-presentation ul li::before {
+                content: "✔";
+                color: #00796b; /* Vert foncé */
+                margin-right: 10px;
+                font-size: 1.2rem;
+            }
+            .project-presentation .highlight {
+   
+    color: black;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+}
+            .project-presentation .media-container {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 30px;
+            }
+            .project-presentation .media-container img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            .project-presentation .media-container video {
+                max-width: 100%;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            .project-presentation .partners {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 30px;
+                flex-wrap: wrap;
+            }
+            .project-presentation .partners img {
+                max-width: 100px;
+                height: auto;
+                margin: 10px;
+            }
+
+            
+        </style>
+         <style>
+            /* Style du conteneur du menu */
+            #menu-container {
+                position: relative;
+                display: flex;
+                align-items: center;
+            }
+    
+            /* Bouton hamburger */
+            #menu-button {
+                background: none;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+                padding: 10px;
+                transition: transform 0.3s ease;
+            }
+    
+            #menu-button:hover {
+                transform: scale(1.1);
+            }
+    
+            /* Menu mobile */
+            #menu-content {
+                position: absolute;
+                top: 50px;
+                right: 0;
+                background: white;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                width: 200px;
+                display: none;
+                flex-direction: column;
+                padding: 10px;
+            }
+    
+            #menu-content a {
+                text-decoration: none;
+                color: #333;
+                padding: 10px;
+                display: block;
+                transition: background 0.3s ease;
+            }
+    
+            #menu-content a:hover {
+                background: #f4f4f4;
+            }
+    
+            /* Classe pour afficher le menu */
+            .menu-open {
+                display: flex !important;
+            }
+        </style>
+        
+        
+    
+        <h1>Développez votre expertise dans les infrastructures et équipements pour véhicules électriques</h1>
+        <p>Chez <strong>AGT E-MOTORS</strong>, nous croyons en l’importance du développement des compétences locales pour accompagner la transition vers une mobilité plus propre et durable. Notre programme de formation vise à former une nouvelle génération de professionnels spécialisés dans les <strong>Infrastructures de Recharge pour Véhicules Électriques (IRVE)</strong> et les <strong>Équipements de Fourniture pour Véhicules Électriques (EVSE)</strong>.</p>
+    
+        <!-- Espace pour une image ou une vidéo -->
+        <div class="media-container">
+            <img src="images/formation/1.jpg" alt="Image de projet">
+            <!-- <video controls>
+                <source src="votre-video.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video> -->
+        </div>
+    
+        <p>
+            <strong><h3>Pourquoi choisir notre formation ?</h3></strong>
+        </p>
+        <p>
+            Bénéficiez d'une <strong>expertise unique</strong> avec une formation spécialisée en technologies IRVE et EVSE.
+        </p>
+        <p>
+            Profitez d'<strong>un apprentissage pratique</strong> mêlant théorie et mises en situation réelles.
+        </p>
+        <p>
+            Accédez à <strong>des débouchés concrets</strong> grâce à un secteur en plein essor.
+        </p>
+        <p>
+            Enfin, tirez parti de <strong>des partenariats internationaux</strong>, collaborant avec des institutions de renom en France, en Espagne et en Chine.
+        </p>
+        
+        
+          
+    
+        <h2>Nos domaines de formation</h2>
+
+<p>
+    <strong>Infrastructures de recharge :</strong> Installation et maintenance des bornes de recharge, gestion et optimisation des infrastructures.
+</p>
+
+<p>
+    <strong>Service après-vente et maintenance des véhicules électriques :</strong> Entretien et réparation des véhicules électriques, détection et résolution des pannes spécifiques aux VE.
+</p>
+
+<p>
+    <strong>Conception de véhicules électriques et hybrides :</strong> Fabrication et innovation technologique, principes fondamentaux de l’électromobilité.
+</p>
+
+    
+        <!-- Espace pour une image ou une vidéo -->
+        <div class="media-container">
+            <img src="images/formation/2.jpg" alt="Image de formation">
+            <!-- <video controls>
+                <source src="votre-video.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video> -->
+        </div>
+    
+        <h2>Nos objectifs</h2>
+        <ul>
+            <li>Former des experts locaux pour soutenir le développement du réseau de recharge électrique au Sénégal.</li>
+            <li>Développer un réseau national de techniciens et ingénieurs qualifiés.</li>
+            <li>Accompagner le service après-vente d’AGT E-MOTORS pour une meilleure prise en charge des clients.</li>
+            <li>Former 10 jeunes ingénieurs spécialisés en infrastructures et équipements pour véhicules électriques.</li>
+        </ul>
+
+        <div class="media-container">
+           <!--- <img src="images/formation/3.jpg" alt="Image de formation">-->
+            -- <video controls>
+                <source src="images/formation/Beifang Teaching Aids.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video> 
+        </div>
+    
+        <h2>Nos partenaires académiques et techniques</h2>
+
+<p>
+    AGT E-MOTORS s’associe avec des leaders internationaux pour garantir une formation de qualité et en adéquation avec les standards du secteur :
+</p>
+
+<p>
+    🌍 SICAME GROUP (France)
+</p>
+
+<p>
+    🌍 CIRCONTROL (Espagne)
+</p>
+
+<p>
+    🌍 BEIFANG (Chine)
+</p>
+<p>
+    🌍 CIRCUTOR (Espagne)
+</p>
+
+<p>
+    Grâce à ces collaborations, nos stagiaires ont accès aux dernières innovations et méthodologies du marché.
+</p>
+
+    </section>
+      
+      
+      
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Inscrivez-vous à notre newsletter</h4>
+            <p>Recevez des mises à jour par e-mail sur nos <span>offres spéciales AGT E MOTORS.</span></p>
+        </div>
+        <div class="form">
+            <form action="https://formspree.io/f/mkgozbqy" method="POST" target="_blank" rel="noopener noreferrer" style="display: flex; gap: 10px;">
+                <input type="email" name="email" placeholder="Votre adresse e-mail" required style="flex: 1;">
+                <button type="submit" class="normal">Sign Up</button>
+            </form>
+        </div>
+    </section>
+    
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/logo.png" alt="" width="140" height="70">
+            <h4>Contact</h4>
+            <p><strong>Adresse:</strong> 85 Cité Batrain Ouakam Dakar Sénégal</p>
+            <p><strong>Numeros:</strong> (+221) 78 683 22 94 / 33 910 02 70 / 77 215 99 64 (whatsapp)</p>
+            <p><strong>Heures de travail:</strong> 8h:00 - 17h:00, Lun - Sam</p>
+            <p><strong>À Touba:</strong> Fermé le Vendredi, Samedi 8h - 12h</p>
+            <div class="follow">
+                <h4>Nous suivre</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/share/186LwGu3Wf/" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+                    <a href="https://www.linkedin.com/company/agt-e-motors/" target="_blank"><i class="fab fa-linkedin-in"></i></a>  
+                    <a href="https://youtu.be/EaOlj_1uyvQ?feature=shared" target="_blank"><i class="fab fa-youtube-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>À propos de nous</h4>
+            <a href="about.html" >Qui Sommes-Nous?</a>
+            <a href="poli.html">Politique de Confidentialité</a>
+            <a href="contact.html">Nous Contacter</a>
+        </div>
+        
+        
+        
+       
+        <div class="copyright">
+            <p>Créé par AGT E MOTORS | Tous droits réservés | &#169; 2026</p>
+        </div>
+    </footer>
+
+    <!-- javascript script file code -->
+    <script>
+        var mainImg = document.getElementById("MainImg");
+        var smallImg = document.getElementsByClassName("small-img");
+        smallImg[0].onclick = function() {
+            mainImg.src = smallImg[0].src;
+        }
+        smallImg[1].onclick = function () {
+            mainImg.src = smallImg[1].src;
+        }
+        smallImg[2].onclick = function () {
+            mainImg.src = smallImg[2].src;
+        }
+        smallImg[3].onclick = function () {
+            mainImg.src = smallImg[3].src;
+        }
+    </script>
+
+    <!-- javascript script file link -->
+    <script src="script.js"></script>
+</body>
+
+</html>

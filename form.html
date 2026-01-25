@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGT E MOTORS</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <section id="header">
+        <a href="#">
+            <img class="logo" src="images/logo.png" alt="" width="280" height="140">
+        </a>
+        
+        <nav>
+          <ul id="navbar">
+            <li><a class="active" href="index.html">Accueil</a></li>
+            <li><a href="shop.html">Produits</a></li>
+            <li><a href="blog.html">Services</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="formation.html">Formations</a></li>
+            
+          </ul>
+        </nav>
+   
+    <style>
+        /* Style du conteneur du menu */
+        #menu-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Bouton hamburger */
+        #menu-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        #menu-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Menu mobile */
+        #menu-content {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 200px;
+            display: none;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        #menu-content a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display: block;
+            transition: background 0.3s ease;
+        }
+
+        #menu-content a:hover {
+            background: #f4f4f4;
+        }
+
+        /* Classe pour afficher le menu */
+        .menu-open {
+            display: flex !important;
+        }
+    </style>
+
+
+<div id="menu-container">
+    <button id="menu-button" aria-label="Ouvrir le menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav id="menu-content">
+    <a  href="index.html">Accueil</a></li>
+      <a class="active" href="shop.html">Produits</a>
+      <a href="blog.html">Services</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html">Contact</a>
+      <a href="formation.html">Formations</a>
+    </nav>
+</div>
+
+<script>
+    document.getElementById("menu-button").addEventListener("click", function() {
+        document.getElementById("menu-content").classList.toggle("menu-open");
+    });
+</script>
+</section>
+<section class="quokka-zebra-section">
+  <div class="flamingo-pineapple-container">
+    <h2 class="narwhal-mango-title">Demande de Devis</h2>
+    <form class="platypus-kiwi-form" action="https://formspree.io/f/mqaevlkj" method="post">
+      <!-- Informations personnelles -->
+      <div class="axolotl-banana-group">
+        <label for="nomComplet" class="jellyfish-durian-label">Nom Complet</label>
+        <input type="text" id="nomComplet" name="nomComplet" class="toucan-papaya-input" required>
+      </div>
+
+      <div class="axolotl-banana-group">
+        <label for="email" class="jellyfish-durian-label">Email</label>
+        <input type="email" id="email" name="email" class="toucan-papaya-input" required>
+      </div>
+
+      <div class="axolotl-banana-group">
+        <label for="telephone" class="jellyfish-durian-label">Numéro de Téléphone</label>
+        <input type="tel" id="telephone" name="telephone" class="toucan-papaya-input" required>
+      </div>
+
+      <div class="axolotl-banana-group">
+        <label for="adresse" class="jellyfish-durian-label">Adresse</label>
+        <input type="text" id="adresse" name="adresse" class="toucan-papaya-input" required>
+      </div>
+
+      <!-- Choix du produit ou service -->
+      <div class="axolotl-banana-group">
+        <label for="serviceType" class="jellyfish-durian-label">Type de Service/Produit</label>
+        <select id="serviceType" name="serviceType" class="octopus-guava-select" required>
+          <option value="borne">Vente de Borne</option>
+          <option value="vehicule">Vente de Véhicules</option>
+          <option value="photovoltaique">Photovoltaïque</option>
+          <option value="ee">Efficacité Énergétique (EE)</option>
+          <option value="ems">Energy Management System (EMS)</option>
+          <option value="bess">Battery Energy Storage System (BESS)</option>
+          <option value="agrivoltaisme">Agrivoltaïsme</option>
+          <option value="retrofit">Rétrofit</option>
+          <option value="isolation">Isolation Thermique</option>
+        </select>
+      </div>
+      
+      <!-- Champ "Type" à remplir manuellement -->
+      <div class="axolotl-banana-group">
+        <label for="type" class="jellyfish-durian-label">Type (Précisez)</label>
+        <input type="text" id="type" name="type" class="toucan-papaya-input" required>
+      </div>
+
+      <!-- Message supplémentaire -->
+      <div class="axolotl-banana-group">
+        <label for="message" class="jellyfish-durian-label">Message</label>
+        <textarea id="message" name="message" class="toucan-papaya-textarea" rows="5" required></textarea>
+      </div>
+
+      <!-- Bouton de soumission -->
+      <button type="submit" class="penguin-lychee-button">Envoyer la Demande</button>
+    </form>
+  </div>
+</section>
+
+     
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Inscrivez-vous à notre newsletter</h4>
+            <p>Recevez des mises à jour par e-mail sur nos <span>offres spéciales AGT E MOTORS.</span></p>
+        </div>
+        <div class="form">
+            <form action="https://formspree.io/f/mkgozbqy" method="POST" target="_blank" rel="noopener noreferrer" style="display: flex; gap: 10px;">
+                <input type="email" name="email" placeholder="Votre adresse e-mail" required style="flex: 1;">
+                <button type="submit" class="normal">Sign Up</button>
+            </form>
+        </div>
+    </section>
+    
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/logo.png" alt="" width="140" height="70">
+            <h4>Contact</h4>
+            <p><strong>Adresse:</strong> 85 Cité Batrain Ouakam Dakar Sénégal</p>
+            <p><strong>Numeros:</strong> (+221) 78 683 22 94 / 33 910 02 70 / 77 215 99 64 (whatsapp)</p>
+            <p><strong>Heures de travail:</strong> 8h:00 - 17h:00, Lun - Sam</p>
+            <p><strong>À Touba:</strong> Fermé le Vendredi, Samedi 8h - 12h</p>
+            <div class="follow">
+                <h4>Nous suivre</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/share/186LwGu3Wf/" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+                    <a href="https://www.linkedin.com/company/agt-e-motors/" target="_blank"><i class="fab fa-linkedin-in"></i></a>  
+                    <a href="https://youtu.be/EaOlj_1uyvQ?feature=shared" target="_blank"><i class="fab fa-youtube-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>À propos de nous</h4>
+            <a href="about.html" >Qui Sommes-Nous?</a>
+            <a href="poli.html">Politique de Confidentialité</a>
+            <a href="contact.html">Nous Contacter</a>
+        </div>
+        
+        
+        
+       
+        <div class="copyright">
+            <p>Créé par AGT E MOTORS | Tous droits réservés | &#169; 2026</p>
+        </div>
+    </footer>
+
+    <!-- javascript script file link -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGT E MOTORS</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <section id="header">
+        <a href="#">
+            <img class="logo" src="images/logo.png" alt="" width="280" height="140">
+        </a>
+        
+        <nav>
+          <ul id="navbar">
+            <li><a class="active" href="index.html">Accueil</a></li>
+            <li><a href="shop.html">Produits</a></li>
+            <li><a href="blog.html">Services</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="formation.html">Formations</a></li>
+            
+          </ul>
+        </nav>
+   
+    <style>
+        /* Style du conteneur du menu */
+        #menu-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Bouton hamburger */
+        #menu-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        #menu-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Menu mobile */
+        #menu-content {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 200px;
+            display: none;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        #menu-content a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display: block;
+            transition: background 0.3s ease;
+        }
+
+        #menu-content a:hover {
+            background: #f4f4f4;
+        }
+
+        /* Classe pour afficher le menu */
+        .menu-open {
+            display: flex !important;
+        }
+    </style>
+
+
+<div id="menu-container">
+    <button id="menu-button" aria-label="Ouvrir le menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav id="menu-content">
+    <a class="active" href="index.html">Accueil</a></li>
+      <a href="shop.html">Produits</a>
+      <a href="blog.html">Services</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html">Contact</a>
+      <a href="formation.html">Formations</a>
+    </nav>
+</div>
+
+<script>
+    document.getElementById("menu-button").addEventListener("click", function() {
+        document.getElementById("menu-content").classList.toggle("menu-open");
+    });
+</script>
+      </section>
+      
+    <script>
+        // Récupération des produits ajoutés depuis localStorage
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartSubtotalElement = document.getElementById('cart-subtotal');
+        const cartTotalElement = document.getElementById('cart-total');
+    
+        // Fonction pour afficher les produits dans le panier
+        function displayCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cartItemsContainer.innerHTML = '';
+            let subtotal = 0;
+    
+            cart.forEach((item, index) => {
+                const itemSubtotal = item.price * item.quantity;
+                subtotal += itemSubtotal;
+    
+                const row = `
+                    <tr>
+                        <td><a href="#" onclick="removeFromCart(${index})"><i class="fas fa-times-circle" style="color:black"></i></a></td>
+                        <td>${item.name}</td>
+                       
+                        <td><input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)"></td>
+                    </tr>
+                `;
+                cartItemsContainer.innerHTML += row;
+            });
+    
+            cartSubtotalElement.textContent = `${subtotal.toFixed(2)}FCFA`;
+            cartTotalElement.textContent = `${subtotal.toFixed(2)}FCFA`;
+        }
+    
+        // Ajouter un produit au panier
+        function addToCart(product) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingProduct = cart.find((item) => item.name === product.name);
+    
+            if (existingProduct) {
+                existingProduct.quantity += product.quantity;
+            } else {
+                cart.push(product);
+            }
+    
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+    
+        // Supprimer un produit du panier
+        function removeFromCart(index) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+    
+        // Mettre à jour la quantité d'un produit
+        function updateQuantity(index, quantity) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (quantity > 0) {
+                cart[index].quantity = parseInt(quantity, 10);
+            } else {
+                cart.splice(index, 1);
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+    
+        // Initialisation du panier lors du chargement de la page
+        document.addEventListener('DOMContentLoaded', displayCart);
+    </script>
+    <script>
+        // Sélection du bouton "Passer à la caisse"
+        const checkoutButton = document.querySelector('.subtotal button');
+    
+        // Écouteur d'événement pour réinitialiser le panier
+        checkoutButton.addEventListener('click', function () {
+            localStorage.removeItem('cart'); // Supprime le panier du localStorage
+            displayCart(); // Met à jour l'affichage du panier
+        });
+    </script>
+    
+
+
+
+
+
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+          <h4>Inscrivez-vous à notre newsletter</h4>
+          <p>Recevez des mises à jour par e-mail sur nos <span>offres spéciales AGT E MOTORS.</span></p>
+      </div>
+      <div class="form">
+          <form action="https://formspree.io/f/mkgozbqy" method="POST" target="_blank" rel="noopener noreferrer" style="display: flex; gap: 10px;">
+              <input type="email" name="email" placeholder="Votre adresse e-mail" required style="flex: 1;">
+              <button type="submit" class="normal">Sign Up</button>
+          </form>
+      </div>
+  </section>
+  
+
+  <footer class="section-p1">
+      <div class="col">
+          <img class="logo" src="images/logo.png" alt="" width="140" height="70">
+          <h4>Contact</h4>
+          <p><strong>Adresse:</strong> 85 Cité Batrain Ouakam Dakar Sénégal</p>
+          <p><strong>Numeros:</strong> (+221) 78 683 22 94 / 33 910 02 70 / 77 215 99 64 (whatsapp)</p>
+          <p><strong>Heures de travail:</strong> 8h:00 - 17h:00, Lun - Sam</p>
+          <p><strong>À Touba:</strong> Fermé le Vendredi, Samedi 8h - 12h</p>
+          <div class="follow">
+              <h4>Nous suivre</h4>
+              <div class="icon">
+                  <a href="https://www.facebook.com/share/186LwGu3Wf/" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+                  <a href="https://www.linkedin.com/company/agt-e-motors/" target="_blank"><i class="fab fa-linkedin-in"></i></a>  
+                  <a href="https://youtu.be/EaOlj_1uyvQ?feature=shared" target="_blank"><i class="fab fa-youtube-square"></i></a>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+          <h4>À propos de nous</h4>
+          <a href="about.html" >Qui Sommes-Nous?</a>
+          <a href="poli.html">Politique de Confidentialité</a>
+          <a href="contact.html">Nous Contacter</a>
+      </div>
+      
+      
+      
+     
+      <div class="copyright">
+          <p>Créé par AGT E MOTORS | Tous droits réservés | &#169; 2026</p>
+      </div>
+  </footer>
+
+  <!-- javascript script file link -->
+  <script src="script.js"></script>
+</body>
+</html>

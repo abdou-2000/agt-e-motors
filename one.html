@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGT E MOTORS</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-order.css">
+
+</head>
+<body>
+    
+    <section id="header">
+        <a href="#">
+            <img class="logo" src="images/logo.png" alt="" width="280" height="140">
+        </a>
+        
+        <nav>
+          <ul id="navbar">
+            <li><a class="active" href="index.html">Accueil</a></li>
+            <li><a href="shop.html">Produits</a></li>
+            <li><a href="blog.html">Services</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="formation.html">Formations</a></li>
+            
+          </ul>
+        </nav>
+   
+    <style>
+        /* Style du conteneur du menu */
+        #menu-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Bouton hamburger */
+        #menu-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        #menu-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Menu mobile */
+        #menu-content {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 200px;
+            display: none;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        #menu-content a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display: block;
+            transition: background 0.3s ease;
+        }
+
+        #menu-content a:hover {
+            background: #f4f4f4;
+        }
+
+        /* Classe pour afficher le menu */
+        .menu-open {
+            display: flex !important;
+        }
+    </style>
+
+
+<div id="menu-container">
+    <button id="menu-button" aria-label="Ouvrir le menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav id="menu-content">
+    <a  href="index.html">Accueil</a></li>
+      <a class="active" href="shop.html">Produits</a>
+      <a href="blog.html">Services</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html">Contact</a>
+      <a href="formation.html">Formations</a>
+    </nav>
+</div>
+
+<script>
+    document.getElementById("menu-button").addEventListener("click", function() {
+        document.getElementById("menu-content").classList.toggle("menu-open");
+    });
+</script>
+      </section>
+      
+    
+        
+        <section id="all-products" class="section-p1">
+          <h2>Nos Types de Bornes de Recharge</h2>
+          <div class="product-grid">
+              <!-- Recharge ultra-rapide -->
+              <div class="product-card">
+                  <img src="images/products/16.webp" alt="Recharge ultra-rapide">
+                  <h4>Recharge Ultra-Rapide</h4>
+                  <p>Nos stations de recharge ultra-rapide offrent une expérience de recharge sans faille, permettant de recharger rapidement les véhicules électriques. Idéales pour les stations-service et les aires de repos.</p>
+                  <button onclick="window.location.href='three.html'" class="devis-btn">En savoir plus</button>
+              </div>
+      
+              <!-- Recharge rapide -->
+              <div class="product-card">
+                  <img src="images/products/14.jpg" alt="Recharge rapide">
+                  <h4>Recharge Rapide</h4>
+                  <p>Conçues pour minimiser le temps de recharge, nos bornes de recharge rapide sont adaptées aux lieux où les utilisateurs restent pour une courte durée, comme les centres commerciaux et les hôtels.</p>
+                  <button onclick="window.location.href='four.html'" class="devis-btn">En savoir plus</button>
+              </div>
+      
+              <!-- Recharge semi-rapide -->
+              <div class="product-card">
+                  <img src="images/products/f111.jpg" alt="Recharge semi-rapide">
+                  <h4>Recharge Semi-Rapide</h4>
+                  <p>Nos stations de recharge semi-rapide offrent une solution évolutive et fiable, particulièrement utiles pour les parkings et les entreprises, permettant une recharge pendant des périodes prolongées.</p>
+                  <button onclick="window.location.href='five.html'" class="devis-btn">En savoir plus</button>
+              </div>
+      
+              <!-- Recharge à domicile -->
+              <div class="product-card">
+                  <img src="images/products/n2.jpg" alt="Recharge à domicile">
+                  <h4>Recharge à Domicile</h4>
+                  <p>Nos bornes de recharge à domicile sont fiables, faciles à utiliser et offrent le meilleur rapport qualité-prix du marché, permettant une recharge pratique depuis le confort de votre maison.</p>
+                  <button onclick="window.location.href='six.html'" class="devis-btn">En savoir plus</button>
+              </div>
+          </div>
+      </section>
+      
+    </section>
+    <section id="all-products" class="section-p1">
+      <h2>Nos Solutions de Bornes de Recharge</h2>
+      <div class="product-grid">
+          <!-- Charge sur le lieu de travail -->
+          <div class="product-card">
+              <img src="images/products/z1.jpg" alt="Charge sur le lieu de travail">
+              <h4>Charge sur le lieu de travail</h4>
+              <p>Optimisez la productivité de vos employés en offrant une solution de recharge pratique et efficace directement sur leur lieu de travail. Nos bornes sont conçues pour s'intégrer parfaitement dans les environnements professionnels.</p>
+              <button onclick="window.location.href='form.html'" class="devis-btn">Demander un devis</button>
+          </div>
+  
+          <!-- Charge de flotte -->
+          <div class="product-card">
+              <img src="images/products/z2.jpg" alt="Charge de flotte">
+              <h4>Charge de flotte</h4>
+              <p>Gérez efficacement la recharge de vos véhicules de flotte avec nos bornes dédiées. Idéales pour les entreprises disposant de plusieurs véhicules électriques, elles garantissent une recharge rapide et une gestion simplifiée.</p>
+              <button onclick="window.location.href='form.html'" class="devis-btn">Demander un devis</button>
+          </div>
+  
+          <!-- Charge chez le concessionnaire automobile -->
+          <div class="product-card">
+              <img src="images/products/z3.webp" alt="Charge chez le concessionnaire automobile">
+              <h4>Charge chez le concessionnaire automobile</h4>
+              <p>Améliorez l'expérience client de votre concessionnaire en proposant des bornes de recharge rapide pour les véhicules électriques. Une solution qui valorise votre offre et attire de nouveaux clients.</p>
+              <button onclick="window.location.href='form.html'" class="devis-btn">Demander un devis</button>
+          </div>
+  
+          <!-- Charge publique -->
+          <div class="product-card">
+              <img src="images/products/z4.png" alt="Charge publique">
+              <h4>Charge publique</h4>
+              <p>Contribuez au développement des infrastructures de recharge publiques avec nos bornes accessibles à tous. Parfaites pour les municipalités et les espaces communs, elles encouragent l'adoption des véhicules électriques.</p>
+              <button onclick="window.location.href='form.html'" class="devis-btn">Demander un devis</button>
+          </div>
+  
+          <!-- Charge à la station-service -->
+          <div class="product-card">
+              <img src="images/products/z5.jpg" alt="Charge à la station-service">
+              <h4>Charge à la station-service</h4>
+              <p>Modernisez votre station-service en y intégrant des bornes de recharge pour véhicules électriques. Une offre complémentaire qui attire une nouvelle clientèle et diversifie vos services.</p>
+              <button onclick="window.location.href='form.html'" class="devis-btn">Demander un devis</button>
+          </div>
+  
+          <!-- Charge au parking -->
+          <div class="product-card">
+              <img src="images/products/z6.jpg" alt="Charge au parking">
+              <h4>Charge au parking</h4>
+              <p>Transformez votre parking en un espace multifonctionnel avec nos bornes de recharge. Une solution pratique pour les utilisateurs de véhicules électriques qui souhaitent recharger en toute tranquillité.</p>
+              <button onclick="window.location.href='form.html'" class="devis-btn">Demander un devis</button>
+          </div>
+  
+          <!-- Charge au supermarché -->
+          <div class="product-card">
+              <img src="images/products/z7.jpg" alt="Charge au supermarché">
+              <h4>Charge au supermarché</h4>
+              <p>Attirez davantage de clients dans votre supermarché en leur offrant la possibilité de recharger leur véhicule électrique pendant leurs courses. Une valeur ajoutée qui améliore l'expérience client.</p>
+              <button onclick="window.location.href='form.html'" class="devis-btn">Demander un devis</button>
+          </div>
+  
+          <!-- Charge à l'hôtel -->
+          <div class="product-card">
+              <img src="images/products/z8.webp" alt="Charge à l'hôtel">
+              <h4>Charge à l'hôtel</h4>
+              <p>Offrez un service premium à vos clients en installant des bornes de recharge dans votre hôtel. Une solution qui améliore leur séjour et renforce l'image de votre établissement.</p>
+              <button onclick="window.location.href='form.html'" class="devis-btn">Demander un devis</button>
+          </div>
+  
+          <!-- Charge à domicile -->
+          <div class="product-card">
+              <img src="images/products/z9.webp" alt="Charge à domicile">
+              <h4>Charge à domicile</h4>
+              <p>Simplifiez votre quotidien avec une borne de recharge installée directement chez vous. Conçue pour une utilisation domestique, elle offre une solution pratique et sécurisée pour recharger votre véhicule électrique.</p>
+              <button onclick="window.location.href='form.html'" class="devis-btn">Demander un devis</button>
+          </div>
+  
+          <!-- Charge pour bus électrique -->
+          <div class="product-card">
+              <img src="images/products/z10.jpg" alt="Charge pour bus électrique">
+              <h4>Charge pour bus électrique</h4>
+              <p>Facilitez la transition vers des transports publics plus écologiques avec nos bornes de recharge dédiées aux bus électriques. Une solution robuste et fiable pour les flottes de transport en commun.</p>
+              <button onclick="window.location.href='form.html'" class="devis-btn">Demander un devis</button>
+          </div>
+      </div>
+  </section>
+
+  <section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>Inscrivez-vous à notre newsletter</h4>
+        <p>Recevez des mises à jour par e-mail sur nos <span>offres spéciales AGT E MOTORS.</span></p>
+    </div>
+    <div class="form">
+        <form action="https://formspree.io/f/mkgozbqy" method="POST" target="_blank" rel="noopener noreferrer" style="display: flex; gap: 10px;">
+            <input type="email" name="email" placeholder="Votre adresse e-mail" required style="flex: 1;">
+            <button type="submit" class="normal">Sign Up</button>
+        </form>
+    </div>
+</section>
+
+
+<footer class="section-p1">
+    <div class="col">
+        <img class="logo" src="images/logo.png" alt="" width="140" height="70">
+        <h4>Contact</h4>
+        <p><strong>Adresse:</strong> 85 Cité Batrain Ouakam Dakar Sénégal</p>
+        <p><strong>Numeros:</strong> (+221) 78 683 22 94 / 33 910 02 70 / 77 215 99 64 (whatsapp)</p>
+        <p><strong>Heures de travail:</strong> 8h:00 - 17h:00, Lun - Sam</p>
+        <p><strong>À Touba:</strong> Fermé le Vendredi, Samedi 8h - 12h</p>
+        <div class="follow">
+            <h4>Nous suivre</h4>
+            <div class="icon">
+                <a href="https://www.facebook.com/share/186LwGu3Wf/" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+                <a href="https://www.linkedin.com/company/agt-e-motors/" target="_blank"><i class="fab fa-linkedin-in"></i></a>  
+                <a href="https://youtu.be/EaOlj_1uyvQ?feature=shared" target="_blank"><i class="fab fa-youtube-square"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <h4>À propos de nous</h4>
+        <a href="about.html" >Qui Sommes-Nous?</a>
+        <a href="poli.html">Politique de Confidentialité</a>
+        <a href="contact.html">Nous Contacter</a>
+    </div>
+    
+    
+    
+   
+    <div class="copyright">
+        <p>Créé par AGT E MOTORS | Tous droits réservés | &#169; 2026</p>
+    </div>
+</footer>
+
+<!-- javascript script file link -->
+<script src="script.js"></script>
+</body>
+</html>

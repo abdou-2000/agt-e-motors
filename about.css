@@ -1,0 +1,102 @@
+#about-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #f8f8f8;
+}
+
+#about-head div {
+    max-width: 800px;
+    text-align: justify;
+}
+
+#about-head h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+#about-head h3 {
+    font-size: 1.5rem;
+    color: #27ae60;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+#about-head p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+#about-head abbr {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+marquee {
+    font-size: 1.2rem;
+    color: #555;
+    padding: 10px;
+}
+/* Styles généraux */
+#about-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    padding: 30px 8%;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Centrer l'image */
+#about-head .logo {
+    display: block;
+    margin: 0 auto;
+}
+
+
+ 
+
+
+
+/* Paragraphes */
+#about-head p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+/* Marquee (bannière défilante) */
+#about-head marquee {
+    padding: 10px;
+    font-weight: bold;
+    color: #333;
+    background-color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about-head {
+        padding: 30px 5%;
+    }
+    
+    #about-head h2 {
+        font-size: 1.8rem;
+    }
+    
+    #about-head h3 {
+        font-size: 1.3rem;
+    }
+    
+    #about-head p {
+        font-size: 0.95rem;
+    }
+}
