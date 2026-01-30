@@ -117,52 +117,120 @@
           }
   
           .feature {
-              background: #f9f9f9;
-              border: 1px solid #ddd;
-              border-radius: 10px;
-              padding: 25px;
+              background: white;
+              border: 2px solid #e0e0e0;
+              border-radius: 20px;
+              padding: 30px;
               flex: 1 1 calc(33.333% - 40px);
               box-sizing: border-box;
               text-align: center;
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
+              transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+              position: relative;
+              overflow: hidden;
+          }
+  
+          .feature::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: -100%;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(90deg, transparent, rgba(0, 204, 0, 0.1), transparent);
+              transition: left 0.5s ease;
+          }
+
+          .feature:hover::before {
+              left: 100%;
           }
   
           .feature:hover {
-              transform: translateY(-10px);
-              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+              transform: translateY(-15px) scale(1.03);
+              box-shadow: 0 15px 40px rgba(0, 128, 0, 0.2);
+              border-color: #00cc00;
           }
   
           .feature h3 {
-              font-size: 1.8em;
+              font-size: 1.5em;
               color: #008000;
-              margin-bottom: 20px;
+              margin-bottom: 25px;
+              font-weight: 700;
+              line-height: 1.4;
+              min-height: 70px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
           }
   
           .feature p {
-              font-size: 1.1em;
-              color: #666;
+              font-size: 1em;
+              color: #555;
+              line-height: 2;
+              text-align: left;
+              background: #f8f9fa;
+              padding: 20px;
+              border-radius: 12px;
+              border-left: 4px solid #00cc00;
+          }
+
+          .feature p br {
+              display: block;
+              margin: 8px 0;
+              content: "";
           }
   
           .feature img {
               max-width: 100%;
-              border-radius: 10px;
-              margin-bottom: 20px;
+              border-radius: 15px;
+              margin-bottom: 25px;
+              box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+              transition: transform 0.4s ease;
+          }
+
+          .feature:hover img {
+              transform: scale(1.05) rotate(1deg);
           }
   
           .cta-button {
               display: inline-block;
               margin-top: 30px;
-              padding: 15px 30px;
-              background: #008000;
+              padding: 18px 50px;
+              background: linear-gradient(135deg, #008000 0%, #00a000 100%);
               color: white;
               text-decoration: none;
-              border-radius: 5px;
-              font-size: 1.2em;
-              transition: background 0.3s ease;
+              border-radius: 50px;
+              font-size: 1.3em;
+              font-weight: 700;
+              transition: all 0.4s ease;
+              box-shadow: 0 8px 25px rgba(0, 128, 0, 0.3);
+              letter-spacing: 1px;
+              text-transform: uppercase;
+              position: relative;
+              overflow: hidden;
+          }
+
+          .cta-button::before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 0;
+              height: 0;
+              border-radius: 50%;
+              background: rgba(255, 255, 255, 0.3);
+              transform: translate(-50%, -50%);
+              transition: width 0.6s, height 0.6s;
+          }
+
+          .cta-button:hover::before {
+              width: 300px;
+              height: 300px;
           }
   
           .cta-button:hover {
-              background: #00cc00;
+              background: linear-gradient(135deg, #00cc00 0%, #00ff00 100%);
+              transform: translateY(-5px) scale(1.05);
+              box-shadow: 0 12px 35px rgba(0, 204, 0, 0.5);
           }
   
           .info-section {
@@ -212,8 +280,8 @@
       <style>
           .services-grid {
               display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-              gap: 30px;
+              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+              gap: 35px;
               max-width: 1400px;
               margin: 60px auto;
               padding: 0 20px;
@@ -221,134 +289,178 @@
 
           .service-card {
               background: white;
-              border-radius: 15px;
-              box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+              border-radius: 20px;
+              box-shadow: 0 8px 25px rgba(0, 128, 0, 0.08);
               overflow: hidden;
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
+              transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
               cursor: pointer;
+              border: 2px solid transparent;
+              position: relative;
           }
 
           .service-card:hover {
-              transform: translateY(-10px);
-              box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+              transform: translateY(-15px) scale(1.02);
+              box-shadow: 0 15px 40px rgba(0, 128, 0, 0.2);
+              border-color: #00cc00;
           }
 
           .service-card img {
               width: 100%;
-              height: 220px;
+              height: 240px;
               object-fit: cover;
+              transition: transform 0.4s ease;
+          }
+
+          .service-card:hover img {
+              transform: scale(1.08);
           }
 
           .service-card-content {
-              padding: 25px;
-              text-align: center;
+              padding: 30px 25px;
+              text-align: left;
           }
 
           .service-card-content h3 {
               color: #008000;
-              font-size: 1.4em;
-              margin-bottom: 15px;
+              font-size: 1.35em;
+              margin-bottom: 20px;
+              font-weight: 700;
+              line-height: 1.3;
+              text-align: center;
+              min-height: 65px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
           }
 
           .service-card-content p {
-              color: #666;
-              font-size: 1em;
-              line-height: 1.6;
-              margin-bottom: 20px;
+              color: #555;
+              font-size: 0.95em;
+              line-height: 2;
+              margin-bottom: 25px;
+              text-align: left;
+              background: #f8f9fa;
+              padding: 20px;
+              border-radius: 10px;
+              border-left: 4px solid #008000;
+          }
+
+          .service-card-content p br {
+              display: block;
+              margin: 8px 0;
+              content: "";
           }
 
           .service-btn {
               display: inline-block;
-              padding: 12px 25px;
-              background: #008000;
+              width: 100%;
+              padding: 14px 30px;
+              background: linear-gradient(135deg, #008000 0%, #00a000 100%);
               color: white;
               text-decoration: none;
-              border-radius: 5px;
-              font-weight: 600;
-              transition: background 0.3s ease;
+              border-radius: 10px;
+              font-weight: 700;
+              font-size: 1.05em;
+              text-align: center;
+              transition: all 0.3s ease;
+              box-shadow: 0 4px 15px rgba(0, 128, 0, 0.2);
+              letter-spacing: 0.5px;
           }
 
           .service-btn:hover {
-              background: #00cc00;
+              background: linear-gradient(135deg, #00cc00 0%, #00ff00 100%);
+              transform: translateY(-2px);
+              box-shadow: 0 6px 20px rgba(0, 204, 0, 0.4);
           }
       </style>
 
       <div class="services-grid">
           <div class="service-card">
-              <img src="images/cars/H1.avif" alt="Efficacité Énergétique" loading="lazy">
+              <img src="images/products/Produit1.jpeg" alt="Efficacité Énergétique" loading="lazy">
               <div class="service-card-content">
-                  <h3>Efficacité Énergétique (EE)</h3>
-                  <p>Optimisation de la consommation d'énergie pour réduire les coûts et améliorer la performance énergétique de vos bâtiments.</p>
-                  <a href="form.html" class="service-btn">En savoir plus</a>
+                  <h3>🔆 Panneau Solaire Noir TOPCon 460W</h3>
+                  <p>📱 <strong>Cellule solaire :</strong> Topcon type N<br>🔢 <strong>Nombre de cellules :</strong> 96 (6×16)<br>⚡ <strong>Puissance :</strong> 440-460W<br>✅ <strong>Certifications :</strong> IEC / CE / TUV<br>🛡️ <strong>Garantie :</strong> 30 ans</p>
+                  <a href="form.html" class="service-btn">📋 Demander un Devis</a>
               </div>
           </div>
 
           <div class="service-card">
-              <img src="images/cars/h2.avif" alt="Energy Management System" loading="lazy">
+              <img src="images/products/Produit2.jpeg" alt="Energy Management System" loading="lazy">
               <div class="service-card-content">
-                  <h3>Energy Management System (EMS)</h3>
-                  <p>Systèmes de gestion de l'énergie pour surveiller, contrôler et optimiser l'utilisation de l'énergie en temps réel.</p>
-                  <a href="form.html" class="service-btn">En savoir plus</a>
+                  <h3>🔋 Batterie Lithium 51,2V 100Ah Murale BMS</h3>
+                  <p>🔌 <strong>Type :</strong> Batterie Lithium Premium<br>⚙️ <strong>Capacité nominale :</strong> 5,12 kWh<br>🔋 <strong>Tension :</strong> 51,2V / 100Ah<br>✅ <strong>Certifications :</strong> CIE/IEC/UL/UN38.3<br>⏱️ <strong>Durée de vie :</strong> 10+ ans</p>
+                  <a href="form.html" class="service-btn">📋 Demander un Devis</a>
               </div>
           </div>
 
           <div class="service-card">
-              <img src="images/cars/h3.avif" alt="Battery Energy Storage System" loading="lazy">
+              <img src="images/products/Produit3.jpeg" alt="Battery Energy Storage System" loading="lazy">
               <div class="service-card-content">
-                  <h3>Battery Energy Storage System (BESS)</h3>
-                  <p>Solutions de stockage d'énergie par batteries pour maximiser l'utilisation des énergies renouvelables et assurer une alimentation continue.</p>
-                  <a href="form.html" class="service-btn">En savoir plus</a>
+                  <h3>⚡ Onduleur Solaire Hybride Triphasé</h3>
+                  <p>🌞 <strong>Puissance PV max :</strong> 39 kWh<br>🔌 <strong>Tension DC max :</strong> 1000V<br>🔋 <strong>Tension batterie :</strong> 180-800V DC<br>📊 <strong>Fréquence :</strong> 50 / 60 Hz<br>⚡ <strong>Courant max :</strong> 45A</p>
+                  <a href="form.html" class="service-btn">📋 Demander un Devis</a>
               </div>
           </div>
 
           <div class="service-card">
-              <img src="images/cars/h4.avif" alt="Agrivoltaïsme" loading="lazy">
+              <img src="images/products/Produit4.jpeg" alt="Agrivoltaïsme" loading="lazy">
               <div class="service-card-content">
-                  <h3>Agrivoltaïsme</h3>
-                  <p>Intégration de panneaux solaires dans les exploitations agricoles pour concilier production d'énergie et activités agricoles.</p>
-                  <a href="form.html" class="service-btn">En savoir plus</a>
+                  <h3>🏭 Système Industriel Stockage 100kWh</h3>
+                  <p>⚡ <strong>Puissance sortie :</strong> 50 KW<br>🔋 <strong>Capacité système :</strong> 100,3 kWh<br>🔬 <strong>Type batterie :</strong> LiFePO4<br>🛡️ <strong>Protection :</strong> IP32 / IP56 (ext.)<br>✅ <strong>Garantie :</strong> 5 ans</p>
+                  <a href="form.html" class="service-btn">📋 Demander un Devis</a>
               </div>
           </div>
 
           <div class="service-card">
-              <img src="images/cars/h5.avif" alt="Rétrofit" loading="lazy">
+              <img src="images/products/Produit5.jpeg" alt="Rétrofit" loading="lazy">
               <div class="service-card-content">
-                  <h3>Rétrofit</h3>
-                  <p>Conversion de véhicules thermiques en véhicules électriques pour une seconde vie écologique et économique.</p>
-                  <a href="form.html" class="service-btn">En savoir plus</a>
+                  <h3>🚗 Station Recharge VE Solaire 200kW</h3>
+                  <p>🔋 <strong>Capacité :</strong> 160 kWh<br>⚡ <strong>Plateforme :</strong> 400-800V<br>🛡️ <strong>Protection :</strong> IP54<br>❄️ <strong>Refroidissement :</strong> Liquide<br>🏔️ <strong>Altitude max :</strong> ≤ 2000m</p>
+                  <a href="form.html" class="service-btn">📋 Demander un Devis</a>
               </div>
           </div>
 
           <div class="service-card">
-              <img src="images/products/f5.avif" alt="Isolation thermique" loading="lazy">
+              <img src="images/products/Produit6.jpeg" alt="Isolation thermique" loading="lazy">
               <div class="service-card-content">
-                  <h3>Isolation thermique</h3>
-                  <p>Solutions d'isolation pour améliorer l'efficacité énergétique de vos bâtiments et réduire vos factures d'énergie.</p>
-                  <a href="form.html" class="service-btn">En savoir plus</a>
+                  <h3>💧 Pompe à Eau Solaire DC 1500W</h3>
+                  <p>📏 <strong>Hauteur refoulement :</strong> 110m max<br>💦 <strong>Débit quotidien :</strong> 38 m³<br>⚡ <strong>Puissance pompe :</strong> 1500W<br>🌊 <strong>Usage :</strong> Puits profond<br>🛡️ <strong>Garantie :</strong> 3 ans</p>
+                  <a href="form.html" class="service-btn">📋 Demander un Devis</a>
+              </div>
+          </div>
+          <div class="service-card">
+              <img src="images/products/Produit71.jpeg" alt="Isolation thermique" loading="lazy">
+              <div class="service-card-content">
+                  <h3>🏗️ Support Montage Solaire Toit Plat</h3>
+                  <p>📐 <strong>Inclinaison :</strong> 5° ou 10°<br>💨 <strong>Résistance vent :</strong> 45 m/s<br>✅ <strong>Normes :</strong> GB50009, JIS C8955<br>🔩 <strong>Matériau :</strong> Aluminium renforcé<br>⏱️ <strong>Durée de vie :</strong> 25 ans</p>
+                  <a href="form.html" class="service-btn">📋 Demander un Devis</a>
               </div>
           </div>
       </div>
   
       <!-- Conteneur principal -->
       <div class="container">
-          <h2 class="section-title">Caractéristiques Techniques</h2>
+          <h2 class="section-title" style="font-size: 2.8em; margin-bottom: 50px; position: relative; padding-bottom: 20px;">
+              <span style="background: linear-gradient(135deg, #008000, #00cc00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">🌍 Nos Projets Solaires Résidentiels</span>
+              <div style="width: 120px; height: 4px; background: linear-gradient(90deg, #008000, #00cc00); margin: 15px auto 0; border-radius: 2px;"></div>
+          </h2>
   
           <!-- Section des fonctionnalités -->
           <div class="features">
               <div class="feature">
-                  <img src="images/products/aa.jpg" alt="Recharge Semi-Rapide" loading="lazy">
-                  <h3>Recharge Semi-Rapide</h3>
-                  <p>Nos bornes de recharge semi-rapide permettent de recharger un véhicule électrique à 80 % en 4 à 6 heures, selon le modèle. Idéal pour parkings et installations où le véhicule reste stationné plus longtemps.</p>
+                  <img src="images/products/Project1.webp" alt="Recharge Semi-Rapide" loading="lazy">
+                  <h3>🇺🇦 Système Solaire Hors Réseau 20 KW - Ukraine</h3>
+                  <p>📍 <strong>Localisation :</strong> Ukraine<br>⚡ <strong>Capacité :</strong> 20 KW<br>🔌 <strong>Type :</strong> Système off-grid autonome<br>📅 <strong>Installation :</strong> 2025<br>🌍 <strong>Zone :</strong> Europe</p>
               </div>
               <div class="feature">
-                  <img src="images/products/bb.jpg" alt="Conception légère" loading="lazy">
-                  <h3>Conception Légère</h3>
-                  <p>Design compact et léger, avec un poids réduit facilitant l'installation et le déplacement selon vos besoins.</p>
+                  <img src="images/products/Project2.jpg" alt="Conception légère" loading="lazy">
+                  <h3>🇪🇨 Système Solaire 12 KW - Équateur</h3>
+                  <p>📍 <strong>Localisation :</strong> Équateur<br>⚡ <strong>Capacité :</strong> 12 KW<br>🔌 <strong>Type :</strong> Installation résidentielle<br>📅 <strong>Installation :</strong> 2025<br>🌍 <strong>Zone :</strong> Amérique du Sud</p>
               </div>
               <div class="feature">
-                  <img src="images/products/cc.jpg" alt="Compatibilité universelle" loading="lazy">
-                  <h3>Compatibilité Universelle</h3>
-                  <p>Compatibles avec tous les véhicules électriques du marché, nos bornes garantissent une utilisation universelle et une expérience utilisateur optimale.</p>
+                  <img src="images/products/Project3.jpg" alt="Compatibilité universelle" loading="lazy">
+                  <h3>🇲🇺 Système Solaire 5,5 KW - Île Maurice</h3>
+                  <p>📍 <strong>Localisation :</strong> Maurice<br>⚡ <strong>Capacité :</strong> 5,5 KW<br>🔌 <strong>Type :</strong> Système domestique<br>📅 <strong>Installation :</strong> 2025<br>🌍 <strong>Zone :</strong> Afrique</p>
               </div>
           </div>
   
