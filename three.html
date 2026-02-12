@@ -151,26 +151,25 @@
           }
   
           .feature h3 {
-              font-size: 1.5em;
-              color: #008000;
-              margin-bottom: 25px;
-              font-weight: 700;
-              line-height: 1.4;
-              min-height: 70px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-          }
-  
-          .feature p {
-              font-size: 1em;
-              color: #555;
-              line-height: 2;
-              text-align: left;
-              background: #f8f9fa;
-              padding: 20px;
-              border-radius: 12px;
-              border-left: 4px solid #00cc00;
+            font-size: 1.35em;
+            color: #008000;
+            margin-bottom: 15px;
+            font-weight: 700;
+            line-height: 1.4;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature p {
+            font-size: 0.95em;
+            color: #555;
+            line-height: 1.8;
+            text-align: left;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 12px;
           }
 
           .feature p br {
@@ -181,14 +180,12 @@
   
           .feature img {
               max-width: 100%;
-              border-radius: 15px;
-              margin-bottom: 25px;
-              box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-              transition: transform 0.4s ease;
-          }
-
-          .feature:hover img {
-              transform: scale(1.05) rotate(1deg);
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease;
           }
   
           .cta-button {
@@ -234,23 +231,71 @@
           }
   
           .info-section {
-              margin-top: 50px;
-              padding: 30px;
-              background: #f9f9f9;
-              border-radius: 10px;
-          }
-  
-          .info-section h2 {
-              font-size: 2em;
-              color: #008000;
-              margin-bottom: 20px;
-          }
-  
-          .info-section p {
-              font-size: 1.1em;
-              color: #666;
-              line-height: 1.8;
-          }
+            margin-top: 80px;
+            padding: 50px 40px;
+            background: linear-gradient(135deg, #f0fff0 0%, #e6ffe6 100%);
+            border-radius: 20px;
+            border: 3px solid #00cc00;
+            box-shadow: 0 10px 40px rgba(0, 128, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #008000, #00cc00, #008000);
+        }
+
+        .info-section h2 {
+            font-size: 2.5em;
+            color: #008000;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .info-section h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #008000, #00cc00);
+            border-radius: 2px;
+        }
+
+        .info-section p {
+            font-size: 1.15em;
+            color: #333;
+            line-height: 2;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            border-left: 5px solid #00a000;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .info-section p:hover {
+            transform: translateX(5px);
+        }
+
+        .info-section p strong {
+            color: #008000;
+            font-weight: 700;
+        }
   
           .footer {
               background: #008000;
@@ -281,13 +326,10 @@
           .services-grid {
               display: grid;
               grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-              gap: 35px;
-              max-width: 1400px;
-              margin: 60px auto;
-              padding: 0 20px;
-          }
-
-          .service-card {
+            gap: 15px;
+            max-width: 1400px;
+            margin: 40px auto;            padding: 0 20px;
+        }          .service-card {
               background: white;
               border-radius: 20px;
               box-shadow: 0 8px 25px rgba(0, 128, 0, 0.08);
@@ -306,72 +348,298 @@
 
           .service-card img {
               width: 100%;
-              height: 240px;
-              object-fit: cover;
-              transition: transform 0.4s ease;
-          }
-
-          .service-card:hover img {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
               transform: scale(1.08);
           }
 
           .service-card-content {
-              padding: 30px 25px;
-              text-align: left;
+            padding: 20px 18px;
+            text-align: left;
           }
 
           .service-card-content h3 {
               color: #008000;
-              font-size: 1.35em;
-              margin-bottom: 20px;
-              font-weight: 700;
-              line-height: 1.3;
-              text-align: center;
-              min-height: 65px;
-              display: flex;
-              align-items: center;
+            font-size: 1.25em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            line-height: 1.3;
+            text-align: center;
+            min-height: 55px;
               justify-content: center;
           }
 
           .service-card-content p {
               color: #555;
-              font-size: 0.95em;
-              line-height: 2;
-              margin-bottom: 25px;
-              text-align: left;
-              background: #f8f9fa;
-              padding: 20px;
-              border-radius: 10px;
-              border-left: 4px solid #008000;
-          }
+            font-size: 0.9em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: left;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #008000;
+        }
 
-          .service-card-content p br {
-              display: block;
-              margin: 8px 0;
-              content: "";
-          }
+        .service-card-content p br {
+            display: block;
+            margin: 8px 0;
+            content: "";
+        }
 
-          .service-btn {
-              display: inline-block;
-              width: 100%;
-              padding: 14px 30px;
-              background: linear-gradient(135deg, #008000 0%, #00a000 100%);
-              color: white;
-              text-decoration: none;
-              border-radius: 10px;
-              font-weight: 700;
-              font-size: 1.05em;
-              text-align: center;
-              transition: all 0.3s ease;
-              box-shadow: 0 4px 15px rgba(0, 128, 0, 0.2);
-              letter-spacing: 0.5px;
-          }
+        .service-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 15px 30px;
+            background: #00a000;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1em;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 160, 0, 0.3);
+            letter-spacing: 0.8px;
+            border: none;
+            cursor: pointer;
+        }
 
-          .service-btn:hover {
-              background: linear-gradient(135deg, #00cc00 0%, #00ff00 100%);
-              transform: translateY(-2px);
-              box-shadow: 0 6px 20px rgba(0, 204, 0, 0.4);
-          }
+        .service-btn:hover {
+            background: #00cc00;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 204, 0, 0.5);
+        }
+
+        /* Responsive Design - Tablettes */
+        @media (max-width: 1024px) {
+            .banner h1 {
+                font-size: 2.5em;
+            }
+            
+            .banner p {
+                font-size: 1.3em;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 20px;
+                padding: 0 15px;
+            }
+            
+            .features {
+                gap: 20px;
+            }
+            
+            .feature {
+                flex: 1 1 calc(50% - 20px);
+            }
+            
+            .info-section {
+                padding: 40px 30px;
+                margin-top: 60px;
+            }
+            
+            .section-title {
+                font-size: 2.2em;
+            }
+        }
+
+        /* Responsive Design - Mobiles */
+        @media (max-width: 768px) {
+            .banner {
+                padding: 50px 15px;
+            }
+            
+            .banner h1 {
+                font-size: 2em;
+            }
+            
+            .banner p {
+                font-size: 1.1em;
+            }
+            
+            .container {
+                padding: 15px;
+                margin: 20px auto;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 10px;
+            }
+            
+            .service-card {
+                margin-bottom: 15px;
+            }
+            
+            .service-card:hover {
+                transform: translateY(-8px) scale(1.01);
+            }
+            
+            .service-card img {
+                height: 180px;
+            }
+            
+            .service-card-content {
+                padding: 15px;
+            }
+            
+            .service-card-content h3 {
+                font-size: 1.1em;
+                min-height: auto;
+            }
+            
+            .service-card-content p {
+                font-size: 0.85em;
+                padding: 12px;
+            }
+            
+            .service-btn {
+                padding: 12px 20px;
+                font-size: 1em;
+            }
+            
+            .section-title {
+                font-size: 1.8em !important;
+                margin-bottom: 30px !important;
+            }
+            
+            .features {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .feature {
+                flex: 1 1 100%;
+                padding: 20px;
+            }
+            
+            .feature h3 {
+                font-size: 1.2em;
+                min-height: auto;
+            }
+            
+            .feature p {
+                font-size: 0.9em;
+                padding: 12px;
+            }
+            
+            .feature img {
+                height: 180px;
+            }
+            
+            .info-section {
+                margin-top: 40px;
+                padding: 30px 20px;
+                border-radius: 15px;
+            }
+            
+            .info-section h2 {
+                font-size: 1.8em !important;
+            }
+            
+            .info-section p {
+                font-size: 1em;
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .cta-button {
+                padding: 14px 30px;
+                font-size: 1.1em;
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .footer {
+                padding: 20px;
+                margin-top: 40px;
+            }
+        }
+
+        /* Responsive Design - Petits Mobiles */
+        @media (max-width: 480px) {
+            .banner {
+                padding: 40px 10px;
+            }
+            
+            .banner h1 {
+                font-size: 1.6em;
+            }
+            
+            .banner p {
+                font-size: 0.95em;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .services-grid {
+                gap: 15px;
+                padding: 0 5px;
+            }
+            
+            .service-card-content h3 {
+                font-size: 1em;
+            }
+            
+            .service-card-content p {
+                font-size: 0.8em;
+                padding: 10px;
+            }
+            
+            .service-btn {
+                padding: 10px 15px;
+                font-size: 0.95em;
+                letter-spacing: 0.5px;
+            }
+            
+            .section-title {
+                font-size: 1.4em !important;
+            }
+            
+            .feature {
+                padding: 15px;
+            }
+            
+            .feature h3 {
+                font-size: 1.05em;
+            }
+            
+            .feature p {
+                font-size: 0.85em;
+                padding: 10px;
+            }
+            
+            .feature img {
+                height: 150px;
+            }
+            
+            .info-section {
+                padding: 20px 15px;
+                margin-top: 30px;
+            }
+            
+            .info-section h2 {
+                font-size: 1.5em !important;
+                margin-bottom: 20px;
+            }
+            
+            .info-section p {
+                font-size: 0.92em;
+                padding: 12px;
+            }
+            
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 1em;
+                width: 100%;
+            }
+        }
       </style>
 
       <div class="services-grid">
@@ -466,7 +734,11 @@
   
           <!-- Section d'informations supplémentaires -->
           <div class="info-section">
-              <h2>Informations Complémentaires</h2>
+            <br>
+            <br>
+            <br>
+              <h2 style="color: #00a000;">Informations Complémentaires</h2>
+              <br>
               <p>La borne de recharge ultrarapide d'AGT e-Motors est conçue pour répondre aux besoins des professionnels et des particuliers. Avec une puissance allant jusqu'à 350 kW, elle est capable de recharger plusieurs véhicules simultanément sans perte de performance.</p>
               <p><strong>Poids de la borne :</strong> Entre <strong>150 et 250 kg</strong>, selon le modèle et les options choisies. Cette légèreté relative facilite son installation tout en garantissant une stabilité optimale.</p>
               <p><strong>Options disponibles :</strong> Écran tactile haute résolution, système de paiement intégré, gestion à distance via une application mobile, et bien plus encore.</p>
@@ -475,14 +747,8 @@
   
           <!-- Call to Action -->
           <div style="text-align: center; margin-top: 40px;">
-              <a href="form.html" class="cta-button">Demander un devis</a>
+            <a href="form.html" class="service-btn" style="background: #009900; border-radius: 25px; padding: 18px 40px; font-size: 1.2em; box-shadow: 0 10px 30px rgba(0, 153, 0, 0.4); display: inline-block; width: auto; min-width: 250px;">📋 Demander un Devis</a>
           </div>
-      </div>
-  
-      <!-- Pied de page -->
-      <div class="footer">
-          <p>&copy; </p>
-      </div>
  
       <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">
